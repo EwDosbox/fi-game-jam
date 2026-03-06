@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d4hwciwdnl0xm"]
 
 [ext_resource type="Script" uid="uid://dlxvbs46si0oc" path="res://Scripts/Game.cs" id="1_b7ecg"]
+[ext_resource type="Script" uid="uid://bmq8i1fs2o5nx" path="res://Scripts/Grid.cs" id="2_jr45x"]
 
 [sub_resource type="GDScript" id="GDScript_vx5ek"]
 script/source = "extends Node2D
@@ -21,3 +22,8 @@ script = SubResource("GDScript_vx5ek")
 
 [node name="Game" type="Node2D" parent="." unique_id=479275414]
 script = ExtResource("1_b7ecg")
+
+[node name="Grid" type="Node2D" parent="." unique_id=1495114567]
+script = ExtResource("2_jr45x")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Grid" unique_id=734412611]
