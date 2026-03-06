@@ -35,7 +35,6 @@ public partial class Grid : Node2D
 	private Transform2D SnapToGrid(Transform2D pos)
 	{
 		return pos;
-
 	}
 
 }

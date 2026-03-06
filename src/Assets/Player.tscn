@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d1ctb6cckoeyo"]
 
 [ext_resource type="Texture2D" uid="uid://c2piidl7sicvo" path="res://Assets/Square.png" id="1_1fna3"]
-[ext_resource type="Script" uid="uid://cjt48i3hye4nt" path="res://Assets/Player.cs" id="1_ify7s"]
+[ext_resource type="Script" uid="uid://v2rsb48f3g6k" path="res://Scripts/Player.cs" id="1_ify7s"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ify7s"]
 animations = [{
