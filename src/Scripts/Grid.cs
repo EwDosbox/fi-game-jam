@@ -6,6 +6,15 @@ using System.Runtime.InteropServices;
 
 public partial class Grid : Node2D
 {
+	#region Private Variables
+	private int gridSize;
+	#endregion
+	#region Public Variables
+	[Export]
+	public int GridSize { get { return gridSize; } set { gridSize = value; } }
+	#endregion
+	#region References
+	#endregion
 	private Godot.Collections.Array<Node2D> children;
 
 	public override void _Ready()

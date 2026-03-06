@@ -3,17 +3,21 @@ using System;
 
 public partial class Game : Node2D
 {
-	#region Vars
-
-	private double timeElapsed = 0;
-
+	#region Private Vars
+	private int turnCounter = 0;
 	#endregion
-	// Called when the node enters the scene tree for the first time.
+	#region Public Vars
+
+	public int Turn { get { return turnCounter; } }
+	#endregion
+	#region References
+	private Node2D Player;
+	#endregion
+
 	public override void _Ready()
 	{
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
 
@@ -21,6 +25,7 @@ public partial class Game : Node2D
 
 	private void GameTick()
 	{
+
 
 	}
 }

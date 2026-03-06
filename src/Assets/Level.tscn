@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://d4hwciwdnl0xm"]
 
 [ext_resource type="Script" uid="uid://dlxvbs46si0oc" path="res://Scripts/Game.cs" id="1_b7ecg"]
+[ext_resource type="TileSet" uid="uid://b8u1i3mo41fqi" path="res://Assets/tile_set.tres" id="2_3pl1g"]
 [ext_resource type="Script" uid="uid://bmq8i1fs2o5nx" path="res://Scripts/Grid.cs" id="2_jr45x"]
+[ext_resource type="PackedScene" uid="uid://d1ctb6cckoeyo" path="res://Assets/Player.tscn" id="4_igmha"]
 
 [sub_resource type="GDScript" id="GDScript_vx5ek"]
 script/source = "extends Node2D
@@ -23,7 +25,10 @@ script = SubResource("GDScript_vx5ek")
 [node name="Game" type="Node2D" parent="." unique_id=479275414]
 script = ExtResource("1_b7ecg")
 
-[node name="Grid" type="Node2D" parent="." unique_id=1495114567]
+[node name="Grid" type="TileMapLayer" parent="." unique_id=734412611]
+tile_set = ExtResource("2_3pl1g")
 script = ExtResource("2_jr45x")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="Grid" unique_id=734412611]
+[node name="Player" parent="Grid" unique_id=1088235652 instance=ExtResource("4_igmha")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=655309865]
