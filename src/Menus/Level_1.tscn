@@ -16,19 +16,24 @@ tile_map_data = PackedByteArray("AAD///7/AAAHAAIAAAD/////AAAHAAIAAAAAAP//AAAHAAI
 [node name="Player" parent="." index="2" unique_id=1088235652]
 position = Vector2(-275, 0)
 rotation = 3.1415927
+collision_layer = 64
 
 [node name="EnemyManager" parent="." index="4" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
 enemies = [NodePath("Enemy"), NodePath("Enemy2"), NodePath("Enemy3"), NodePath("Enemy4")]
 
 [node name="Enemy" parent="EnemyManager" index="0" unique_id=292821970 node_paths=PackedStringArray("gridScript") instance=ExtResource("3_shpnx")]
 position = Vector2(100, 0)
+collision_mask = 16
 gridScript = NodePath("../../Grid")
 
 [node name="Enemy2" parent="EnemyManager" index="1" unique_id=691939491 instance=ExtResource("3_shpnx")]
 position = Vector2(150, 0)
+collision_mask = 1
 
 [node name="Enemy3" parent="EnemyManager" index="2" unique_id=591815721 instance=ExtResource("3_shpnx")]
 position = Vector2(200, 0)
+collision_mask = 1
 
 [node name="Enemy4" parent="EnemyManager" index="3" unique_id=721546669 instance=ExtResource("3_shpnx")]
 position = Vector2(250, 0)
+collision_mask = 1

@@ -15,12 +15,15 @@ public partial class Enemy : Node2D
 	[Export]
 	private AnimatedSprite2D sprite;
 	[Export]
-	public Grid gridScript;
+	private Grid gridScript;
+	[Export]
+	private CollisionShape2D collision;
 	#endregion
 
 	public virtual void Kill()
 	{
 		isDead = true;
+		collision.Disabled = true;
 		sprite.Play("dead");
 	}
 

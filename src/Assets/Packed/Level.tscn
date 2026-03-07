@@ -239,8 +239,7 @@ GridSize = 64
 
 [node name="Player" parent="." unique_id=1088235652 node_paths=PackedStringArray("gridScript") instance=ExtResource("4_igmha")]
 position = Vector2(0, -25)
-collision_layer = 65
-collision_mask = 320
+collision_layer = 80
 gridScript = NodePath("../Grid")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=655309865]

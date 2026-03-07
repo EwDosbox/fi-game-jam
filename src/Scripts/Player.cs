@@ -68,6 +68,20 @@ public partial class Player : CharacterBody2D
 
 			if (collision != null)
 			{
+				Node collider = collision.GetCollider() as Node;
+
+				if (collider is Enemy enemy)
+				{
+					if (bedPower > 3)
+					{
+						enemy.Kill();
+						continue;
+					}
+
+					else
+						GD.Print("DeAD");
+				}
+
 				bedPower = 1;
 				break;
 			}
@@ -77,16 +91,5 @@ public partial class Player : CharacterBody2D
 		}
 
 		GlobalPosition = GlobalPosition.Snapped(gridScript.GridVector);
-	}
-
-	public void Touched(Node body)
-	{
-		if (body is Enemy enemy)
-		{
-			if (bedPower > 2)
-				enemy.Kill();
-			else
-				GD.Print("DIED");
-		}
 	}
 }
