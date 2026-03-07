@@ -22,13 +22,16 @@ func _process(delta: float) -> void:
 [node name="Level" type="Node2D" unique_id=964451484]
 script = SubResource("GDScript_vx5ek")
 
-[node name="Game" type="Node2D" parent="." unique_id=479275414]
+[node name="Game" type="Node2D" parent="." unique_id=479275414 node_paths=PackedStringArray("PlayerScript")]
 script = ExtResource("1_b7ecg")
+PlayerScript = NodePath("../Player")
 
 [node name="Grid" type="TileMapLayer" parent="." unique_id=734412611]
 tile_set = ExtResource("2_3pl1g")
 script = ExtResource("2_jr45x")
-
-[node name="Player" parent="Grid" unique_id=1088235652 instance=ExtResource("4_igmha")]
+GridSize = 50
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=655309865]
+
+[node name="Player" parent="." unique_id=1088235652 node_paths=PackedStringArray("gridScript") instance=ExtResource("4_igmha")]
+gridScript = NodePath("../Grid")

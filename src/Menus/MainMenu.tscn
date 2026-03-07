@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cvph23p6b5tdm"]
 
+[ext_resource type="Script" uid="uid://nruua05d0mhu" path="res://Scripts/MainMenu.cs" id="1_3g7qx"]
+
 [node name="MainMenu" type="Control" unique_id=526585807]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3g7qx")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1561560003]
+
+[node name="Button" type="Button" parent="." unique_id=1043434899]
+layout_mode = 0
+offset_left = -141.0
+offset_top = 104.0
+offset_right = 143.0
+offset_bottom = 140.0
+text = "Level 1"
+
+[connection signal="pressed" from="Button" to="." method="NextScene"]
