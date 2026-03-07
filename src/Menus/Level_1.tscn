@@ -40,3 +40,6 @@ offset_top = -224.0
 offset_right = 288.0
 offset_bottom = -160.0
 text = "Thus YOU, Deepys bed, MUST FIGHT!!!"
+
+[node name="Camera2D" parent="." index="8" unique_id=655309865]
+position = Vector2(0, -32)
