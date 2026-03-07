@@ -31,7 +31,7 @@ tile_set = ExtResource("2_3pl1g")
 script = ExtResource("2_jr45x")
 GridSize = 50
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=655309865]
-
 [node name="Player" parent="." unique_id=1088235652 node_paths=PackedStringArray("gridScript") instance=ExtResource("4_igmha")]
 gridScript = NodePath("../Grid")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=655309865]

@@ -1,13 +1,21 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://cjjju1688kcmi"]
 
+[ext_resource type="Texture2D" uid="uid://c2piidl7sicvo" path="res://Assets/Square.png" id="1_kmutk"]
+
 [resource]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kmutk")
+}],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kmutk")
+}],
 "loop": true,
 "name": &"move",
 "speed": 5.0

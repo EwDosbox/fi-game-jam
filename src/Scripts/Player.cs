@@ -8,6 +8,7 @@ public partial class Player : Node2D
 	[Export]
 	private int bedPower = 1;
 	private Vector2 lastDirection = Vector2.Zero;
+	private bool isMoving = false;
 	#endregion
 	#region Public Variables
 	#endregion
@@ -27,6 +28,10 @@ public partial class Player : Node2D
 
 	public async Task SmoothMove(Vector2 direction)
 	{
+		if (isMoving)
+			return;
+		isMoving = true;
+
 		sprite.Play("move");
 
 		if (direction == lastDirection)
@@ -47,5 +52,6 @@ public partial class Player : Node2D
 		await ToSignal(tween, Tween.SignalName.Finished);
 
 		sprite.Play("idle");
+		isMoving = false;
 	}
 }

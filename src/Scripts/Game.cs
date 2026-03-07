@@ -25,15 +25,19 @@ public partial class Game : Node2D
 		if (isTurnRunning)
 			return;
 
+		Vector2 dir = Vector2.Zero;
 
-		Vector2 dir = Input.GetVector("move_left", "move_right", "move_up", "move_down");
+		if (Input.IsActionJustPressed("move_left"))
+			dir = Vector2.Left;
+		else if (Input.IsActionJustPressed("move_right"))
+			dir = Vector2.Right;
+		else if (Input.IsActionJustPressed("move_up"))
+			dir = Vector2.Up;
+		else if (Input.IsActionJustPressed("move_down"))
+			dir = Vector2.Down;
+
 		if (dir == Vector2.Zero)
 			return;
-
-		if (Mathf.Abs(dir.X) > Mathf.Abs(dir.Y))
-			dir = new Vector2(Mathf.Sign(dir.X), 0);
-		else
-			dir = new Vector2(0, Mathf.Sign(dir.Y));
 
 		GameTick(dir);
 
@@ -48,6 +52,8 @@ public partial class Game : Node2D
 		await PlayerScript.SmoothMove(playerDirection);
 
 		turnCounter++;
+
+		await ToSignal(GetTree().CreateTimer(0.2f), SceneTreeTimer.SignalName.Timeout);
 
 		isTurnRunning = false;
 	}
