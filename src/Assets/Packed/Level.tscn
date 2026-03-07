@@ -6,8 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d1ctb6cckoeyo" path="res://Assets/Packed/Player.tscn" id="4_igmha"]
 [ext_resource type="Script" uid="uid://cxx03iwba30vp" path="res://Scripts/EnemyManager.cs" id="5_mctwc"]
 [ext_resource type="Texture2D" uid="uid://o41q14npfmd2" path="res://Assets/Images/CosmicLilac_Tiles.png" id="6_t7f6x"]
-[ext_resource type="Script" uid="uid://p7aa5pwvvyf1" path="res://Scripts/PauseMenu.cs" id="7_62dxq"]
-[ext_resource type="PackedScene" uid="uid://cvph23p6b5tdm" path="res://Menus/MainMenu.tscn" id="8_c3tdy"]
+[ext_resource type="Script" uid="uid://p7aa5pwvvyf1" path="res://Scripts/PauseMenu.cs" id="8_8keqt"]
 [ext_resource type="Texture2D" uid="uid://dggy8ty5536qi" path="res://Assets/Images/continue-button.png" id="9_8keqt"]
 [ext_resource type="Texture2D" uid="uid://dyq6gmhwc0rma" path="res://Assets/Images/main-menu-button.png" id="9_glpoc"]
 [ext_resource type="Texture2D" uid="uid://ckkpoe47wtigt" path="res://Assets/Images/tittle-card.png" id="9_i2vdq"]
@@ -242,7 +241,7 @@ script = ExtResource("1_b7ecg")
 PlayerScript = NodePath("../Player")
 enemyManager = NodePath("../EnemyManager")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1106616829]
+[node name="Background" type="Sprite2D" parent="." unique_id=1106616829]
 position = Vector2(20, -32.999992)
 scale = Vector2(29.41, 18.58)
 texture = ExtResource("12_7bnyv")
@@ -276,8 +275,7 @@ offset_right = -576.0
 offset_bottom = -320.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("7_62dxq")
-MainMenuScene = ExtResource("8_c3tdy")
+script = ExtResource("8_8keqt")
 
 [node name="ColorRect" type="ColorRect" parent="PauseMenu" unique_id=1539306798]
 layout_mode = 1
