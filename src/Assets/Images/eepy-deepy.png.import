@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh1x2mxqciv6h"
-path="res://.godot/imported/stationary-evil-guy-front.png-2f41778a280315197159b0a9cf57815b.ctex"
+uid="uid://6t7p7gcpwwqi"
+path="res://.godot/imported/eepy-deepy.png-1b4678d151440d9ea042bfc0a09a358b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/stationary-evil-guy-front.png"
-dest_files=["res://.godot/imported/stationary-evil-guy-front.png-2f41778a280315197159b0a9cf57815b.ctex"]
+source_file="res://Assets/Images/eepy-deepy.png"
+dest_files=["res://.godot/imported/eepy-deepy.png-1b4678d151440d9ea042bfc0a09a358b.ctex"]
 
 [params]
 
