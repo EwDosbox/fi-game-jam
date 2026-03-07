@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://d1ctb6cckoeyo" path="res://Assets/Packed/Player.tscn" id="4_igmha"]
 [ext_resource type="Script" uid="uid://cxx03iwba30vp" path="res://Scripts/EnemyManager.cs" id="5_mctwc"]
 [ext_resource type="Texture2D" uid="uid://o41q14npfmd2" path="res://Assets/Images/CosmicLilac_Tiles.png" id="6_t7f6x"]
+[ext_resource type="Script" uid="uid://p7aa5pwvvyf1" path="res://Assets/Packed/PauseMenu.cs" id="7_62dxq"]
+[ext_resource type="PackedScene" uid="uid://cvph23p6b5tdm" path="res://Menus/MainMenu.tscn" id="8_c3tdy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_62dxq"]
 texture = ExtResource("6_t7f6x")
@@ -225,6 +227,9 @@ physics_layer_0/collision_layer = 64
 physics_layer_0/collision_mask = 16
 sources/0 = SubResource("TileSetAtlasSource_62dxq")
 
+[sub_resource type="LabelSettings" id="LabelSettings_t7f6x"]
+font_size = 41
+
 [node name="Level" type="Node2D" unique_id=964451484]
 
 [node name="Game" type="Node2D" parent="." unique_id=479275414 node_paths=PackedStringArray("PlayerScript", "enemyManager")]
@@ -237,6 +242,11 @@ tile_set = ExtResource("2_3pl1g")
 script = ExtResource("2_jr45x")
 GridSize = 64
 
+[node name="Player" parent="." unique_id=1088235652 node_paths=PackedStringArray("gridScript") instance=ExtResource("4_igmha")]
+position = Vector2(0, -25)
+collision_layer = 80
+gridScript = NodePath("../Grid")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=655309865]
 
 [node name="EnemyManager" type="Node2D" parent="." unique_id=1002369456 node_paths=PackedStringArray("enemies")]
@@ -246,7 +256,57 @@ enemies = []
 [node name="Boundary" type="TileMapLayer" parent="." unique_id=1288459111]
 tile_set = SubResource("TileSet_c3tdy")
 
-[node name="Player" parent="." unique_id=1088235652 node_paths=PackedStringArray("gridScript") instance=ExtResource("4_igmha")]
-position = Vector2(0, -25)
-collision_layer = 80
-gridScript = NodePath("../Grid")
+[node name="PauseMenu" type="Control" parent="." unique_id=1264981098]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -576.0
+offset_top = -320.0
+offset_right = 576.0
+offset_bottom = 320.0
+script = ExtResource("7_62dxq")
+MainMenuScene = ExtResource("8_c3tdy")
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu" unique_id=2000308245]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7207738, 0.5877251, 0, 0.1764706)
+
+[node name="Label" type="Label" parent="PauseMenu" unique_id=1133457568]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 96.0
+grow_horizontal = 2
+text = "Eepy Deepy"
+label_settings = SubResource("LabelSettings_t7f6x")
+horizontal_alignment = 1
+
+[node name="ButtonContinue" type="Button" parent="PauseMenu" unique_id=2113186149]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 320.0
+offset_top = 352.0
+offset_right = -320.0
+offset_bottom = -256.0
+text = "Continue
+"
+
+[node name="ButtonMainMenu" type="Button" parent="PauseMenu" unique_id=1369809712]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 320.0
+offset_top = 416.0
+offset_right = -320.0
+offset_bottom = -192.0
+text = "Main Menu"
+
+[connection signal="pressed" from="PauseMenu/ButtonContinue" to="PauseMenu" method="ToggleSetting"]
+[connection signal="pressed" from="PauseMenu/ButtonMainMenu" to="PauseMenu" method="MainMenu"]

@@ -21,7 +21,6 @@ public partial class MainMenu : Control
 
 	public void NextScene()
 	{
-		Debug.Write("Works?");
 		GetTree().ChangeSceneToFile("res://Menus/Level_1.tscn");
 	}
 }
