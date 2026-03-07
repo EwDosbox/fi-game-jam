@@ -29,7 +29,7 @@ PlayerScript = NodePath("../Grid/Player")
 [node name="Grid" type="TileMapLayer" parent="." unique_id=734412611]
 tile_set = ExtResource("2_3pl1g")
 script = ExtResource("2_jr45x")
-GridSize = 1
+GridSize = 50
 
 [node name="Player" parent="Grid" unique_id=1088235652 node_paths=PackedStringArray("gridScript") instance=ExtResource("4_igmha")]
 gridScript = NodePath("..")

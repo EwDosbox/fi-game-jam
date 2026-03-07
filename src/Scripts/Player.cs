@@ -1,11 +1,13 @@
 using Godot;
 using System;
+using System.Threading.Tasks;
 
 public partial class Player : Node2D
 {
 	#region Private Variables
 	[Export]
 	private int bedPower = 1;
+	private Vector2 lastDirection = Vector2.Zero;
 	#endregion
 	#region Public Variables
 	#endregion
@@ -21,9 +23,22 @@ public partial class Player : Node2D
 	{
 	}
 
-	public void Move(Vector2 direction)
+	public async Task SmoothMove(Vector2 direction)
 	{
+		if (direction == lastDirection)
+			bedPower++;
+		else
+			bedPower = 1;
+
+		lastDirection = direction;
 		int move = bedPower * gridScript.GridSize;
-		Position += direction * move;
+
+		Vector2 target = Position + direction * move;
+
+		Tween tween = CreateTween();
+		tween.SetEase(Tween.EaseType.Out);
+		tween.TweenProperty(this, "position", target, 0.15f);
+
+		await ToSignal(tween, Tween.SignalName.Finished);
 	}
 }
