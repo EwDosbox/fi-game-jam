@@ -35,3 +35,5 @@ GridSize = 50
 gridScript = NodePath("../Grid")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=655309865]
+
+[node name="EnemyManager" type="Node2D" parent="." unique_id=1002369456]
