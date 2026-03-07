@@ -1,22 +1,18 @@
 [gd_scene format=4 uid="uid://xs0tfk0povkj"]
 
 [ext_resource type="PackedScene" uid="uid://d4hwciwdnl0xm" path="res://Assets/Packed/Level.tscn" id="1_r38n7"]
+[ext_resource type="PackedScene" uid="uid://m7xnbblaq2if" path="res://Menus/Level_7.tscn" id="2_6ni1p"]
 [ext_resource type="PackedScene" uid="uid://dvm0q8m2ewvib" path="res://Assets/Packed/enemy_s.tscn" id="2_rmhck"]
 
 [node name="Level" unique_id=964451484 instance=ExtResource("1_r38n7")]
 
-[node name="Grid" parent="." index="1" unique_id=734412611]
+[node name="Game" parent="." index="0" unique_id=479275414]
+nextScene = ExtResource("2_6ni1p")
+
+[node name="Grid" parent="." index="2" unique_id=734412611]
 tile_map_data = PackedByteArray("AAD8//n/AAAGAAMAAAD9//n/AAAGAAMAAAD+//n/AAAGAAMAAAD///n/AAAGAAMAAAAAAPf/AAAGAAMAAAABAPf/AAAGAAMAAAABAPj/AAAGAAMAAAAAAPj/AAAGAAMAAAAAAPn/AAAGAAMAAAAAAPr/AAAGAAMAAAAAAPv/AAAGAAMAAAABAPz/AAAGAAMAAAABAP3/AAAGAAMAAAAAAP3/AAAGAAMAAAAAAPz/AAAGAAMAAAABAPr/AAAGAAMAAAABAPn/AAAGAAMAAAABAPv/AAAGAAMAAAD///3/AAAGAAMAAAD///7/AAAGAAMAAAAAAP7/AAAGAAMAAAABAP7/AAAGAAMAAAACAP7/AAAGAAMAAAD/////AAAGAAMAAAAAAP//AAAGAAMAAAABAP//AAAGAAMAAAACAP//AAAGAAMAAAACAP3/AAAGAAMAAAD//wAAAAAGAAMAAAAAAAAAAAAGAAMAAAABAAAAAAAGAAMAAAACAAAAAAAGAAMAAAADAAAAAAAGAAMAAAAEAAAAAAAGAAMAAAAFAAAAAAAGAAMAAAAFAP//AAAGAAMAAAAFAP7/AAAGAAMAAAAFAP3/AAAGAAMAAAAFAPz/AAAGAAMAAAAFAPv/AAAGAAMAAAAFAPr/AAAGAAMAAAAFAPn/AAAGAAMAAAAEAPn/AAAGAAMAAAAEAPr/AAAGAAMAAAAEAPv/AAAGAAMAAAAEAPz/AAAGAAMAAAAEAP3/AAAGAAMAAAAEAP7/AAAGAAMAAAAEAP//AAAGAAMAAAACAPn/AAAGAAMAAAADAPn/AAAGAAMAAAD8//r/AAAGAAMAAAD8//v/AAAGAAMAAAD8//z/AAAGAAMAAAD8//3/AAAGAAMAAAD8//7/AAAGAAMAAAD8////AAAGAAMAAAD8/wAAAAAGAAMAAAD9//r/AAAGAAMAAAD9//v/AAAGAAMAAAD9//z/AAAGAAMAAAD9//3/AAAGAAMAAAD9//7/AAAGAAMAAAD9////AAAGAAMAAAD9/wAAAAAGAAMAAAD+/wAAAAAGAAMAAAD2/wAAAAAGAAMAAAD3/wAAAAAGAAMAAAD4/wAAAAAGAAMAAAD5/wAAAAAGAAMAAAD6/wAAAAAGAAMAAAD7/wAAAAAGAAMAAAA=")
 
-[node name="Player" parent="." index="2" unique_id=1088235652]
-position = Vector2(64, 32)
-
-[node name="Camera2D" parent="." index="3" unique_id=655309865]
-position = Vector2(0, -64)
-offset = Vector2(0, -175)
-zoom = Vector2(0.8, 0.8)
-
-[node name="EnemyManager" parent="." index="4" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
+[node name="EnemyManager" parent="." index="3" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
 enemies = [NodePath("Enemy3"), NodePath("Enemy6"), NodePath("Enemy"), NodePath("Enemy2")]
 
 [node name="Enemy3" parent="EnemyManager" index="0" unique_id=2041763146 node_paths=PackedStringArray("gridScript") instance=ExtResource("2_rmhck")]
@@ -35,5 +31,43 @@ gridScript = NodePath("../../Grid")
 position = Vector2(352, -416)
 gridScript = NodePath("../../Grid")
 
+[node name="Player" parent="." index="4" unique_id=1088235652]
+position = Vector2(64, 32)
+
 [node name="Boundary" parent="." index="5" unique_id=1288459111]
 tile_map_data = PackedByteArray("AAD7//n/AAAAAAIAAAD7//r/AAAAAAIAAAD7//v/AAAAAAIAAAD7//z/AAAAAAIAAAD7//3/AAAAAAIAAAD7//7/AAAAAAIAAAD///v/AAAAAAIAAAADAPv/AAAAAAIAAAD1/wAAAAAAAAIAAAD///f/AAAAAAIAAAD2/wEAAAACAAMAAAD3/wEAAAACAAMAAAD4/wEAAAACAAMAAAD5/wEAAAACAAMAAAD6/wEAAAACAAMAAAD7/wEAAAACAAMAAAD8/wEAAAACAAMAAAD9/wEAAAACAAMAAAD+/wEAAAACAAMAAAD//wEAAAACAAMAAAAAAAEAAAACAAMAAAABAAEAAAACAAMAAAACAAEAAAACAAMAAAADAAEAAAACAAMAAAAEAAEAAAACAAMAAAAFAAEAAAACAAMAAAAGAAAAAAADAAIAAAAGAP//AAADAAIAAAAGAP7/AAADAAIAAAAGAP3/AAADAAIAAAAGAPz/AAADAAIAAAAGAPv/AAADAAIAAAAGAPr/AAADAAIAAAAGAPn/AAADAAIAAAACAPf/AAADAAIAAAD+//v/AAADAAIAAAACAPv/AAADAAIAAAD2////AAABAAAAAAD3////AAABAAAAAAD4////AAABAAAAAAD5////AAABAAAAAAD6////AAABAAAAAAAAAPb/AAABAAAAAAABAPb/AAABAAAAAAADAPj/AAABAAAAAAAEAPj/AAABAAAAAAAFAPj/AAABAAAAAAD8//j/AAABAAAAAAD9//j/AAABAAAAAAD+//j/AAABAAAAAAD7//j/AAAAAAAAAAD1////AAAAAAAAAAD///b/AAAAAAAAAAACAPb/AAADAAAAAAAGAPj/AAADAAAAAAD7////AAAEAAEAAAD1/wEAAAAAAAMAAAAGAAEAAAADAAMAAAD///j/AAAEAAEAAAACAPj/AAAFAAEAAAD+//r/AAAEAAMAAAD///r/AAAFAAMAAAADAPr/AAAFAAMAAAACAPr/AAAEAAMAAAACAPz/AAAFAAEAAAD///z/AAAEAAEAAAD+//z/AAAAAAcAAAD+//3/AAAAAAcAAAD+//7/AAAAAAcAAAD+////AAAAAAcAAAADAPz/AAAAAAcAAAADAP3/AAAAAAcAAAADAP7/AAAAAAcAAAADAP//AAAAAAcAAAA=")
+
+[node name="PauseMenu" parent="." index="6" unique_id=1264981098]
+offset_left = -704.0
+offset_top = -640.0
+offset_right = 704.0
+offset_bottom = 160.0
+
+[node name="ColorRect" parent="PauseMenu" index="0" unique_id=1539306798]
+offset_left = -1246.0
+offset_top = -638.0
+offset_right = 1268.5
+offset_bottom = 848.0
+
+[node name="ColorRect2" parent="PauseMenu" index="1" unique_id=2077849382]
+offset_left = -224.0
+offset_top = 80.0
+offset_right = -31.0
+offset_bottom = 209.0
+
+[node name="ButtonContinue" parent="PauseMenu" index="2" unique_id=2113186149]
+offset_left = -238.0
+offset_top = 139.0
+offset_right = -26.0
+offset_bottom = 207.0
+
+[node name="ButtonMainMenu" parent="PauseMenu" index="3" unique_id=1369809712]
+offset_left = 476.0
+offset_top = 404.0
+offset_right = -468.0
+offset_bottom = -168.0
+
+[node name="Camera2D" parent="." index="7" unique_id=655309865]
+position = Vector2(0, -64)
+offset = Vector2(0, -175)
+zoom = Vector2(0.8, 0.8)
