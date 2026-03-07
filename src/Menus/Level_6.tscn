@@ -7,6 +7,7 @@
 [node name="Level" unique_id=964451484 instance=ExtResource("1_r38n7")]
 
 [node name="Game" parent="." index="0" unique_id=479275414]
+position = Vector2(-3, 1)
 nextScene = ExtResource("2_6ni1p")
 
 [node name="Grid" parent="." index="2" unique_id=734412611]

@@ -1,18 +1,43 @@
 [gd_scene format=4 uid="uid://bovxohvdro7la"]
 
 [ext_resource type="PackedScene" uid="uid://d4hwciwdnl0xm" path="res://Assets/Packed/Level.tscn" id="1_kw3d8"]
+[ext_resource type="PackedScene" uid="uid://u4aksany4wis" path="res://Menus/Level_10.tscn" id="2_15v43"]
+[ext_resource type="PackedScene" uid="uid://bxk3itqy6vcuw" path="res://Assets/Packed/enemy_w.tscn" id="2_ygbum"]
 
 [node name="Level" unique_id=964451484 instance=ExtResource("1_kw3d8")]
 
+[node name="Game" parent="." index="0" unique_id=479275414]
+nextScene = ExtResource("2_15v43")
+
+[node name="Sprite2D" parent="." index="1" unique_id=1106616829]
+position = Vector2(64, -32)
+
 [node name="Grid" parent="." index="2" unique_id=734412611]
 tile_map_data = PackedByteArray("AAD8/wAAAAAGAAMAAAD8////AAAGAAMAAAD8//7/AAAGAAMAAAAEAP7/AAAGAAMAAAAEAP//AAAGAAMAAAAEAAAAAAAGAAMAAAD9//7/AAAGAAMAAAD+//7/AAAGAAMAAAD///7/AAAGAAMAAAAAAP7/AAAGAAMAAAABAP7/AAAGAAMAAAACAP7/AAAGAAMAAAADAP7/AAAGAAMAAAADAP//AAAGAAMAAAACAP//AAAGAAMAAAABAP//AAAGAAMAAAAAAP//AAAGAAMAAAD/////AAAGAAMAAAD+////AAAGAAMAAAD9////AAAGAAMAAAD9/wAAAAAGAAMAAAD+/wAAAAAGAAMAAAD//wAAAAAGAAMAAAAAAAAAAAAGAAMAAAABAAAAAAAGAAMAAAACAAAAAAAGAAMAAAADAAAAAAAGAAMAAAA=")
+
+[node name="EnemyManager" parent="." index="3" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
+enemies = [NodePath("Enemy")]
+
+[node name="Enemy" parent="EnemyManager" index="0" unique_id=292821970 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript") instance=ExtResource("2_ygbum")]
+position = Vector2(288, -96)
+startNode = NodePath("../../Markers/start")
+loopNode = NodePath("../../Markers/loop")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
 
 [node name="Player" parent="." index="4" unique_id=1088235652]
 position = Vector2(-192, 32)
 rotation = 3.1415927
 
 [node name="Boundary" parent="." index="5" unique_id=1288459111]
-tile_map_data = PackedByteArray("AAD7//3/AAAAAAAAAAD7/wEAAAAAAAMAAAAFAAEAAAADAAMAAAAFAP3/AAADAAAAAAD8//3/AAABAAAAAAD9//3/AAABAAAAAAD+//3/AAABAAAAAAD///3/AAABAAAAAAAAAP3/AAABAAAAAAABAP3/AAABAAAAAAACAP3/AAABAAAAAAADAP3/AAABAAAAAAAEAP3/AAABAAAAAAAFAP7/AAADAAEAAAAFAP//AAADAAEAAAAFAAAAAAADAAEAAAD8/wEAAAACAAMAAAD9/wEAAAACAAMAAAD+/wEAAAACAAMAAAD//wEAAAACAAMAAAAAAAEAAAACAAMAAAABAAEAAAACAAMAAAACAAEAAAACAAMAAAADAAEAAAACAAMAAAAEAAEAAAACAAMAAAD7//7/AAAAAAEAAAD7////AAAAAAIAAAD7/wAAAAAAAAEAAAA=")
+tile_map_data = PackedByteArray("AAD7//7/AAAAAAEAAAD7////AAAAAAEAAAD7/wAAAAAAAAEAAAAFAP7/AAADAAEAAAAFAP//AAADAAEAAAAFAAAAAAADAAEAAAD8//3/AAABAAAAAAD9//3/AAABAAAAAAD+//3/AAABAAAAAAD///3/AAABAAAAAAAAAP3/AAABAAAAAAABAP3/AAABAAAAAAACAP3/AAABAAAAAAADAP3/AAABAAAAAAAEAP3/AAABAAAAAAD8/wEAAAACAAMAAAD9/wEAAAACAAMAAAD+/wEAAAACAAMAAAD//wEAAAACAAMAAAAAAAEAAAACAAMAAAABAAEAAAACAAMAAAACAAEAAAACAAMAAAADAAEAAAACAAMAAAAEAAEAAAACAAMAAAAFAAEAAAADAAMAAAAFAP3/AAADAAAAAAD7//3/AAAAAAAAAAD7/wEAAAAAAAMAAAA=")
 
 [node name="Camera2D" parent="." index="7" unique_id=655309865]
 position = Vector2(32, -32)
+zoom = Vector2(1.5, 1.5)
+
+[node name="loop" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="0" unique_id=454457798]
+position = Vector2(-224, -96)
+
+[node name="start" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="1" unique_id=1098633905]
+position = Vector2(288, -96)

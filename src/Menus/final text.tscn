@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://b8fvul84qme6s"]
+[gd_scene format=3 uid="uid://dmdgs7k78kf5p"]
 
-[ext_resource type="Script" uid="uid://nruua05d0mhu" path="res://Scripts/MainMenu.cs" id="1_c1j7j"]
-[ext_resource type="Texture2D" uid="uid://bm5dyc600l4u" path="res://Assets/Images/purple background.png" id="2_fhw1q"]
+[ext_resource type="Script" uid="uid://nruua05d0mhu" path="res://Scripts/MainMenu.cs" id="1_ly0ai"]
+[ext_resource type="Texture2D" uid="uid://bm5dyc600l4u" path="res://Assets/Images/purple background.png" id="2_lsl73"]
 
 [node name="MainMenu" type="Control" unique_id=526585807]
 layout_mode = 3
@@ -10,24 +10,28 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_c1j7j")
+script = ExtResource("1_ly0ai")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1561560003]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=20132863]
 position = Vector2(-2.5000591, 4.000017)
 scale = Vector2(11.609999, 6.7200007)
-texture = ExtResource("2_fhw1q")
+texture = ExtResource("2_lsl73")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1787496418]
 layout_mode = 1
 anchors_preset = -1
-offset_left = -200.0
-offset_top = -250.0
-offset_right = 200.0
-offset_bottom = 200.0
+anchor_left = 0.043
+anchor_top = -0.019000001
+anchor_right = 0.043
+anchor_bottom = -0.019000001
+offset_left = -249.53601
+offset_top = -237.688
+offset_right = 150.46399
+offset_bottom = 212.312
 theme_override_font_sizes/normal_font_size = 25
-text = "Deepy has been battling evil demons all day. After a long battle he finally lays down in bed. But sudenly demons attack his home!!!! But Deepy is so sleepy that he doesnt wake up!!!!!"
+text = "Deepy had the bestest eepy"
 scroll_following = true
 horizontal_alignment = 1
 vertical_alignment = 1
