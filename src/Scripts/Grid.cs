@@ -15,7 +15,7 @@ public partial class Grid : Node2D
 	}
 	public Vector2 GridVector
 	{
-		get { return new Vector2(gridSize, gridSize); }
+		get { return new Vector2(gridSize / 2, gridSize / 2); }
 	}
 	#endregion
 
