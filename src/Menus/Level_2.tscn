@@ -15,9 +15,10 @@ tile_map_data = PackedByteArray("AAD6////AAAHAAIAAAD6/wAAAAAHAAIAAAD6/wEAAAAHAAI
 
 [node name="Player" parent="." index="2" unique_id=1088235652]
 position = Vector2(-416, 256)
+rotation = 3.1415927
 
 [node name="Camera2D" parent="." index="3" unique_id=655309865]
-zoom = Vector2(0.8, 0.8)
+zoom = Vector2(0.6, 0.6)
 
 [node name="EnemyManager" parent="." index="4" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
 enemies = [NodePath("Enemy"), NodePath("Enemy2"), NodePath("Enemy3"), NodePath("Enemy4"), NodePath("Enemy5"), NodePath("Enemy6"), NodePath("Enemy7"), NodePath("Enemy8")]

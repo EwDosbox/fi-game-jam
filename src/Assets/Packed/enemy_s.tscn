@@ -2,12 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://d2dg1bvueo8oq" path="res://Assets/Packed/enemy.tscn" id="1_qdtfb"]
 [ext_resource type="Script" uid="uid://b5asiuinvlvoq" path="res://Scripts/EnemyS.cs" id="2_5yug0"]
-[ext_resource type="Texture2D" uid="uid://c2piidl7sicvo" path="res://Assets/Images/Square.png" id="3_kdyah"]
+[ext_resource type="Texture2D" uid="uid://t70xgumnkors" path="res://Assets/Images/stationary-evil-guy-splat.png" id="3_kdyah"]
 [ext_resource type="Texture2D" uid="uid://dh1x2mxqciv6h" path="res://Assets/Images/stationary-evil-guy-front.png" id="3_slos1"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rx883"]
-atlas = ExtResource("3_kdyah")
-region = Rect2(0, 0, 324, 321)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kdyah"]
 atlas = ExtResource("3_slos1")
@@ -17,7 +13,7 @@ region = Rect2(0, 0, 256, 256)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rx883")
+"texture": ExtResource("3_kdyah")
 }],
 "loop": true,
 "name": &"dead",

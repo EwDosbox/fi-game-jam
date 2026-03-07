@@ -7,7 +7,8 @@
 size = Vector2(128, 64)
 
 [node name="Player" type="CharacterBody2D" unique_id=88190085 node_paths=PackedStringArray("sprite")]
-collision_mask = 256
+collision_layer = 64
+collision_mask = 320
 script = ExtResource("1_ify7s")
 sprite = NodePath("AnimatedSprite2D")
 
@@ -16,7 +17,7 @@ position = Vector2(-5.722046e-06, 1.1920929e-07)
 rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
 sprite_frames = ExtResource("2_ify7s")
-animation = &"idle"
+animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1104575477]
 position = Vector2(1.9073486e-06, 0)
