@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dietcwoc1r3w2"
-path="res://.godot/imported/walking-evil-guy-sheet.png-e713711e63e026b7d9c019bebbe992c4.ctex"
+uid="uid://dcq3t1h4vnvak"
+path="res://.godot/imported/slime-wall.png-571937fff10abb2e610a37a756cd11a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/walking-evil-guy-sheet.png"
-dest_files=["res://.godot/imported/walking-evil-guy-sheet.png-e713711e63e026b7d9c019bebbe992c4.ctex"]
+source_file="res://Assets/Images/slime-wall.png"
+dest_files=["res://.godot/imported/slime-wall.png-571937fff10abb2e610a37a756cd11a3.ctex"]
 
 [params]
 
