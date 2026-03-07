@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d1ctb6cckoeyo" path="res://Assets/Packed/Player.tscn" id="4_igmha"]
 [ext_resource type="Script" uid="uid://cxx03iwba30vp" path="res://Scripts/EnemyManager.cs" id="5_mctwc"]
 [ext_resource type="Texture2D" uid="uid://o41q14npfmd2" path="res://Assets/Images/CosmicLilac_Tiles.png" id="6_t7f6x"]
-[ext_resource type="Script" uid="uid://p7aa5pwvvyf1" path="res://Assets/Packed/PauseMenu.cs" id="7_62dxq"]
+[ext_resource type="Script" uid="uid://p7aa5pwvvyf1" path="res://Scripts/PauseMenu.cs" id="7_62dxq"]
 [ext_resource type="PackedScene" uid="uid://cvph23p6b5tdm" path="res://Menus/MainMenu.tscn" id="8_c3tdy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_62dxq"]
@@ -307,6 +307,8 @@ offset_top = 416.0
 offset_right = -320.0
 offset_bottom = -192.0
 text = "Main Menu"
+
+[node name="Markers" type="Node2D" parent="." unique_id=267341264]
 
 [connection signal="pressed" from="PauseMenu/ButtonContinue" to="PauseMenu" method="ToggleSetting"]
 [connection signal="pressed" from="PauseMenu/ButtonMainMenu" to="PauseMenu" method="MainMenu"]

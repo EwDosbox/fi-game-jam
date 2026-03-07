@@ -37,10 +37,6 @@ public partial class Player : CharacterBody2D
 
 		sprite.Play("move");
 
-		Tween tween = CreateTween();
-		tween.SetEase(Tween.EaseType.Out);
-		tween.SetTrans(Tween.TransitionType.Quad);
-
 		await TweenPhysicsMove(targetPosition);
 
 		sprite.Play("idle");

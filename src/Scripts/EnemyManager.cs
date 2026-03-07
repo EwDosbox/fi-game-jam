@@ -16,14 +16,6 @@ public partial class EnemyManager : Node2D
 	private Enemy[] enemies;
 	#endregion
 
-	public override void _Ready()
-	{
-	}
-
-	public override void _Process(double delta)
-	{
-	}
-
 	public async Task MoveAll()
 	{
 		foreach (Enemy en in enemies)

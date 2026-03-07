@@ -1,16 +1,18 @@
 using Godot;
 using System.Threading.Tasks;
 
-public partial class Enemy : Node2D
+public partial class Enemy : CharacterBody2D
 {
 	#region Private Variables
 	private bool isMoving = false;
 	#endregion
+
 	#region Public Variables
 	public bool isDead = false;
-	public Vector2 Direction;
-	public int NoOfSquares;
+	public virtual Vector2 Direction { get; set; }
+	public virtual int NoOfSquares { get; set; }
 	#endregion
+
 	#region References
 	[Export]
 	private AnimatedSprite2D sprite;

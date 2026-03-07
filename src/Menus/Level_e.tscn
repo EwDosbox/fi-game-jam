@@ -1,0 +1,52 @@
+[gd_scene format=4 uid="uid://bk6jm1brxhqvs"]
+
+[ext_resource type="PackedScene" uid="uid://d4hwciwdnl0xm" path="res://Assets/Packed/Level.tscn" id="1_xu5aw"]
+[ext_resource type="PackedScene" uid="uid://bxk3itqy6vcuw" path="res://Assets/Packed/enemy_w.tscn" id="2_ovrju"]
+[ext_resource type="PackedScene" uid="uid://dvm0q8m2ewvib" path="res://Assets/Packed/enemy_s.tscn" id="3_4h03u"]
+
+[node name="Level" unique_id=964451484 instance=ExtResource("1_xu5aw")]
+
+[node name="Grid" parent="." index="1" unique_id=734412611]
+tile_map_data = PackedByteArray("AAD8////AAACAAIAAAD9////AAACAAIAAAD+////AAACAAIAAAD/////AAACAAIAAAAAAP//AAACAAIAAAABAP//AAACAAIAAAACAP//AAACAAIAAAADAP//AAACAAIAAAD7////AAACAAIAAAAEAP//AAACAAIAAAAEAAAAAAACAAIAAAAEAAEAAAACAAIAAAAEAAIAAAACAAIAAAD7/wMAAAACAAIAAAD8/wMAAAACAAIAAAD9/wMAAAACAAIAAAD+/wMAAAACAAIAAAD//wMAAAACAAIAAAAAAAMAAAACAAIAAAABAAMAAAACAAIAAAACAAMAAAACAAIAAAADAAMAAAACAAIAAAAEAAMAAAACAAIAAAADAAAAAAACAAIAAAADAAEAAAACAAIAAAADAAIAAAACAAIAAAA=")
+
+[node name="Player" parent="." index="2" unique_id=1088235652]
+position = Vector2(-256, -32)
+
+[node name="EnemyManager" parent="." index="4" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
+enemies = [NodePath("Enemy"), NodePath("Enemy2"), NodePath("Enemy3")]
+
+[node name="Enemy" parent="EnemyManager" index="0" unique_id=292821970 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript") instance=ExtResource("2_ovrju")]
+position = Vector2(288, -32)
+startNode = NodePath("../../Markers/Start1")
+loopNode = NodePath("../../Markers/Loop1")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
+
+[node name="Enemy2" parent="EnemyManager" index="1" unique_id=1811426035 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript") instance=ExtResource("2_ovrju")]
+position = Vector2(-288, 224)
+startNode = NodePath("../../Markers/Start2")
+loopNode = NodePath("../../Markers/Loop2")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
+
+[node name="Enemy3" parent="EnemyManager" index="2" unique_id=480000215 node_paths=PackedStringArray("gridScript") instance=ExtResource("3_4h03u")]
+position = Vector2(224, -32)
+gridScript = NodePath("../../Grid")
+
+[node name="Boundary" parent="." index="5" unique_id=1288459111]
+tile_map_data = PackedByteArray("AAD7//7/AAABAAAAAAD8//7/AAABAAAAAAD9//7/AAABAAAAAAD+//7/AAABAAAAAAD///7/AAABAAAAAAAAAP7/AAABAAAAAAABAP7/AAABAAAAAAACAP7/AAABAAAAAAADAP7/AAABAAAAAAAEAP7/AAABAAAAAAD7/wIAAAABAAAAAAD8/wIAAAABAAAAAAD9/wIAAAABAAAAAAD+/wIAAAABAAAAAAD//wIAAAABAAAAAAAAAAIAAAABAAAAAAABAAIAAAABAAAAAAACAAIAAAAEAAEAAAD6////AAAAAAEAAAD6/wMAAAAAAAEAAAAFAP//AAADAAEAAAAFAAAAAAADAAEAAAAFAAEAAAADAAEAAAAFAAIAAAADAAEAAAAFAAMAAAADAAEAAAAFAAQAAAADAAMAAAD6//7/AAAAAAAAAAD6/wIAAAAAAAAAAAD6/wQAAAAAAAMAAAAFAP7/AAADAAAAAAD7/wQAAAABAAMAAAD8/wQAAAABAAMAAAD9/wQAAAABAAMAAAD+/wQAAAABAAMAAAD//wQAAAABAAMAAAAAAAQAAAABAAMAAAABAAQAAAABAAMAAAACAAQAAAABAAMAAAADAAQAAAABAAMAAAAEAAQAAAABAAMAAAD7/wAAAAACAAMAAAD8/wAAAAACAAMAAAD9/wAAAAACAAMAAAD+/wAAAAACAAMAAAD//wAAAAACAAMAAAAAAAAAAAACAAMAAAABAAAAAAACAAMAAAACAAAAAAAFAAMAAAD6/wAAAAAAAAMAAAACAAEAAAAAAAIAAAA=")
+
+[node name="PauseMenu" parent="." index="6" unique_id=1264981098]
+visible = false
+
+[node name="Start1" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="0" unique_id=1356040652]
+position = Vector2(288, -32)
+
+[node name="Start2" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="1" unique_id=216651312]
+position = Vector2(-288, 224)
+
+[node name="Loop1" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="2" unique_id=484448480]
+position = Vector2(288, 224)
+
+[node name="Loop2" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="3" unique_id=1901356367]
+position = Vector2(288, 224)

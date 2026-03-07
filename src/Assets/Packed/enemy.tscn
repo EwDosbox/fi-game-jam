@@ -18,7 +18,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2wu0s"]
 size = Vector2(50.108925, 49.4172)
 
-[node name="Enemy" type="StaticBody2D" unique_id=153910270 node_paths=PackedStringArray("sprite", "collision")]
+[node name="Enemy" type="CharacterBody2D" unique_id=665808320 node_paths=PackedStringArray("sprite", "collision")]
 scale = Vector2(1.2772176, 1.2950957)
 collision_layer = 256
 collision_mask = 336
