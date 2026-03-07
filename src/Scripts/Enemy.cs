@@ -17,21 +17,14 @@ public partial class Enemy : Node2D
 	[Export]
 	public Grid gridScript;
 	#endregion
-	public override void _Ready()
-	{
-	}
 
-	public override void _Process(double delta)
-	{
-	}
-
-	public void Kill()
+	public virtual void Kill()
 	{
 		isDead = true;
 		sprite.Play("dead");
 	}
 
-	public async Task SmoothMove()
+	public virtual async Task SmoothMove()
 	{
 		if (isMoving)
 			return;

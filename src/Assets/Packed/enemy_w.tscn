@@ -1,7 +1,77 @@
 [gd_scene format=3 uid="uid://bxk3itqy6vcuw"]
 
 [ext_resource type="PackedScene" uid="uid://d2dg1bvueo8oq" path="res://Assets/Packed/enemy.tscn" id="1_iikm6"]
-[ext_resource type="Script" uid="uid://wcmiiiwg1pbt" path="res://Assets/Packed/EnemyW.cs" id="2_0wopc"]
+[ext_resource type="Script" uid="uid://wcmiiiwg1pbt" path="res://Scripts/EnemyW.cs" id="2_0wopc"]
+[ext_resource type="Texture2D" uid="uid://dietcwoc1r3w2" path="res://Assets/Images/walking-evil-guy-sheet.png" id="3_t1ldn"]
 
-[node name="Enemy" unique_id=1798319853 instance=ExtResource("1_iikm6")]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wopc"]
+atlas = ExtResource("3_t1ldn")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1ldn"]
+atlas = ExtResource("3_t1ldn")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhykf"]
+atlas = ExtResource("3_t1ldn")
+region = Rect2(1000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qq8xo"]
+atlas = ExtResource("3_t1ldn")
+region = Rect2(2000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36pq6"]
+atlas = ExtResource("3_t1ldn")
+region = Rect2(3000, 0, 1000, 1000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1ldn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wopc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1ldn")
+}],
+"loop": true,
+"name": &"walk_d",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhykf")
+}],
+"loop": true,
+"name": &"walk_l",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qq8xo")
+}],
+"loop": true,
+"name": &"walk_r",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36pq6")
+}],
+"loop": true,
+"name": &"walk_u",
+"speed": 5.0
+}]
+
+[node name="Enemy" unique_id=292821970 instance=ExtResource("1_iikm6")]
+script = null
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=409386753]
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_t1ldn")
+animation = &"idle"
 script = ExtResource("2_0wopc")

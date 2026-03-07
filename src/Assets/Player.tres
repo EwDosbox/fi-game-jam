@@ -1,12 +1,17 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://cjjju1688kcmi"]
 
+[ext_resource type="Texture2D" uid="uid://6t7p7gcpwwqi" path="res://Assets/Images/eepy-deepy.png" id="1_710xu"]
 [ext_resource type="Texture2D" uid="uid://c2piidl7sicvo" path="res://Assets/Images/Square.png" id="1_kmutk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8f7er"]
+atlas = ExtResource("1_710xu")
+region = Rect2(0, 0, 1000, 2000)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_kmutk")
+"texture": SubResource("AtlasTexture_8f7er")
 }],
 "loop": true,
 "name": &"idle",

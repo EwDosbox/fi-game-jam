@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dfirpmfsoceqm"]
 
 [ext_resource type="PackedScene" uid="uid://d4hwciwdnl0xm" path="res://Assets/Packed/Level.tscn" id="1_ryu3x"]
+[ext_resource type="PackedScene" uid="uid://bxk3itqy6vcuw" path="res://Assets/Packed/enemy_w.tscn" id="2_x1wte"]
 
 [node name="Level" unique_id=964451484 instance=ExtResource("1_ryu3x")]
 
@@ -9,3 +10,10 @@ tile_map_data = PackedByteArray("AAAAAP//AAABAAEAAAD/////AAABAAEAAAD//wAAAAABAAE
 
 [node name="Player" parent="." index="2" unique_id=1088235652]
 position = Vector2(0, -25)
+
+[node name="EnemyManager" parent="." index="4" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
+enemies = [NodePath("Enemy")]
+
+[node name="Enemy" parent="EnemyManager" index="0" unique_id=1798319853 node_paths=PackedStringArray("gridScript") instance=ExtResource("2_x1wte")]
+position = Vector2(227, 24)
+gridScript = NodePath("../../Grid")

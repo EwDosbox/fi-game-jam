@@ -54,4 +54,15 @@ public partial class Player : Node2D
 		sprite.Play("idle");
 		isMoving = false;
 	}
+
+	public void Touched(Node body)
+	{
+		if (body is Enemy enemy)
+		{
+			if (bedPower > 2)
+				enemy.Kill();
+			else
+				GD.Print("DIED");
+		}
+	}
 }

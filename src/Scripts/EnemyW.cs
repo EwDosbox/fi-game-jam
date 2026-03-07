@@ -2,22 +2,16 @@ using Godot;
 using System;
 using System.Threading.Tasks;
 
-public partial class EnemyW : Node2D
+public partial class EnemyW : Enemy
 {
 	#region Private Variables
 	private bool isMoving = false;
 	#endregion
 	#region Public Variables
-	public bool isDead = false;
-	[Export]
-	public Vector2 Direction;
-	public int NoOfSquares = 1;
 	#endregion
 	#region References
 	[Export]
 	private AnimatedSprite2D sprite;
-	[Export]
-	public Grid gridScript;
 	#endregion
 	public override void _Ready()
 	{
@@ -27,13 +21,7 @@ public partial class EnemyW : Node2D
 	{
 	}
 
-	public void Kill()
-	{
-		isDead = true;
-		sprite.Play("dead");
-	}
-
-	public async Task SmoothMove()
+	public override async Task SmoothMove()
 	{
 		if (isMoving)
 			return;
