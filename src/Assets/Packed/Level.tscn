@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dlxvbs46si0oc" path="res://Scripts/Game.cs" id="1_b7ecg"]
 [ext_resource type="TileSet" uid="uid://b8u1i3mo41fqi" path="res://Assets/tile_set.tres" id="2_3pl1g"]
 [ext_resource type="Script" uid="uid://bmq8i1fs2o5nx" path="res://Scripts/Grid.cs" id="2_jr45x"]
-[ext_resource type="PackedScene" uid="uid://d1ctb6cckoeyo" path="res://Assets/Prefabs/Player.tscn" id="4_igmha"]
+[ext_resource type="PackedScene" uid="uid://d1ctb6cckoeyo" path="res://Assets/Player.tscn" id="4_igmha"]
 [ext_resource type="Script" uid="uid://cxx03iwba30vp" path="res://Scripts/EnemyManager.cs" id="5_mctwc"]
 
 [node name="Level" type="Node2D" unique_id=964451484]

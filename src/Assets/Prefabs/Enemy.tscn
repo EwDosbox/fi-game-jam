@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://bvupc7ybuivoa"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_sin2o"]
-
-[node name="Enemy" type="Node2D" unique_id=2035060829]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1657235693]
-sprite_frames = SubResource("SpriteFrames_sin2o")
