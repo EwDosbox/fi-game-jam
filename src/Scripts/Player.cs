@@ -13,6 +13,8 @@ public partial class Player : Node2D
 	#endregion
 	#region References
 	[Export]
+	private AnimatedSprite2D sprite;
+	[Export]
 	public Grid gridScript;
 	#endregion
 	public override void _Ready()
@@ -25,6 +27,8 @@ public partial class Player : Node2D
 
 	public async Task SmoothMove(Vector2 direction)
 	{
+		sprite.Play("move");
+
 		if (direction == lastDirection)
 			bedPower++;
 		else
@@ -34,11 +38,14 @@ public partial class Player : Node2D
 		int move = bedPower * gridScript.GridSize;
 
 		Vector2 target = Position + direction * move;
+		target = target.Snapped(gridScript.GridVector);
 
 		Tween tween = CreateTween();
 		tween.SetEase(Tween.EaseType.Out);
 		tween.TweenProperty(this, "position", target, 0.15f);
 
 		await ToSignal(tween, Tween.SignalName.Finished);
+
+		sprite.Play("idle");
 	}
 }

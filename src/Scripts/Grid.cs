@@ -13,6 +13,10 @@ public partial class Grid : Node2D
 		get { return gridSize; }
 		set { gridSize = value; }
 	}
+	public Vector2 GridVector
+	{
+		get { return new Vector2(gridSize, gridSize); }
+	}
 	#endregion
 
 	#region References
