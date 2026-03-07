@@ -8,6 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://o41q14npfmd2" path="res://Assets/Images/CosmicLilac_Tiles.png" id="6_t7f6x"]
 [ext_resource type="Script" uid="uid://p7aa5pwvvyf1" path="res://Assets/Packed/PauseMenu.cs" id="7_62dxq"]
 [ext_resource type="PackedScene" uid="uid://cvph23p6b5tdm" path="res://Menus/MainMenu.tscn" id="8_c3tdy"]
+[ext_resource type="Texture2D" uid="uid://dggy8ty5536qi" path="res://Assets/Images/continue-button.png" id="9_8keqt"]
+[ext_resource type="Texture2D" uid="uid://dyq6gmhwc0rma" path="res://Assets/Images/main-menu-button.png" id="9_glpoc"]
+[ext_resource type="Texture2D" uid="uid://ckkpoe47wtigt" path="res://Assets/Images/tittle-card.png" id="9_i2vdq"]
+[ext_resource type="Texture2D" uid="uid://bm5dyc600l4u" path="res://Assets/Images/purple background.png" id="12_7bnyv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_62dxq"]
 texture = ExtResource("6_t7f6x")
@@ -227,8 +231,9 @@ physics_layer_0/collision_layer = 64
 physics_layer_0/collision_mask = 16
 sources/0 = SubResource("TileSetAtlasSource_62dxq")
 
-[sub_resource type="LabelSettings" id="LabelSettings_t7f6x"]
-font_size = 41
+[sub_resource type="Theme" id="Theme_i2vdq"]
+
+[sub_resource type="Theme" id="Theme_8keqt"]
 
 [node name="Level" type="Node2D" unique_id=964451484]
 
@@ -237,76 +242,111 @@ script = ExtResource("1_b7ecg")
 PlayerScript = NodePath("../Player")
 enemyManager = NodePath("../EnemyManager")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1106616829]
+position = Vector2(20, -32.999992)
+scale = Vector2(29.41, 18.58)
+texture = ExtResource("12_7bnyv")
+
 [node name="Grid" type="TileMapLayer" parent="." unique_id=734412611]
 tile_set = ExtResource("2_3pl1g")
 script = ExtResource("2_jr45x")
 GridSize = 64
+
+[node name="EnemyManager" type="Node2D" parent="." unique_id=1002369456 node_paths=PackedStringArray("enemies")]
+script = ExtResource("5_mctwc")
+enemies = []
 
 [node name="Player" parent="." unique_id=1088235652 node_paths=PackedStringArray("gridScript") instance=ExtResource("4_igmha")]
 position = Vector2(0, -25)
 collision_layer = 80
 gridScript = NodePath("../Grid")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=655309865]
-
-[node name="EnemyManager" type="Node2D" parent="." unique_id=1002369456 node_paths=PackedStringArray("enemies")]
-script = ExtResource("5_mctwc")
-enemies = []
-
 [node name="Boundary" type="TileMapLayer" parent="." unique_id=1288459111]
 tile_set = SubResource("TileSet_c3tdy")
 
 [node name="PauseMenu" type="Control" parent="." unique_id=1264981098]
+visible = false
 layout_mode = 3
-anchors_preset = 0
-offset_left = -576.0
-offset_top = -320.0
-offset_right = 576.0
-offset_bottom = 320.0
-script = ExtResource("7_62dxq")
-MainMenuScene = ExtResource("8_c3tdy")
-
-[node name="ColorRect" type="ColorRect" parent="PauseMenu" unique_id=2000308245]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -320.0
+offset_right = -576.0
+offset_bottom = -320.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.7207738, 0.5877251, 0, 0.1764706)
+script = ExtResource("7_62dxq")
+MainMenuScene = ExtResource("8_c3tdy")
 
-[node name="Label" type="Label" parent="PauseMenu" unique_id=1133457568]
+[node name="ColorRect" type="ColorRect" parent="PauseMenu" unique_id=1539306798]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 96.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -632.0
+offset_top = -457.0
+offset_right = 1882.5
+offset_bottom = 1029.0
 grow_horizontal = 2
-text = "Eepy Deepy"
-label_settings = SubResource("LabelSettings_t7f6x")
-horizontal_alignment = 1
+grow_vertical = 2
+color = Color(0.627451, 0.4392157, 0.8039216, 0.5058824)
+
+[node name="ColorRect2" type="ColorRect" parent="PauseMenu" unique_id=2077849382]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 478.0
+offset_top = 344.0
+offset_right = 671.0
+offset_bottom = 473.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.34117648, 0.1882353, 0.40784314, 0.6039216)
 
 [node name="ButtonContinue" type="Button" parent="PauseMenu" unique_id=2113186149]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 320.0
-offset_top = 352.0
-offset_right = -320.0
-offset_bottom = -256.0
-text = "Continue
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 470.0
+offset_top = 340.0
+offset_right = 682.0
+offset_bottom = 408.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_i2vdq")
+text = "
 "
+icon = ExtResource("9_8keqt")
+flat = true
 
 [node name="ButtonMainMenu" type="Button" parent="PauseMenu" unique_id=1369809712]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 320.0
-offset_top = 416.0
-offset_right = -320.0
-offset_bottom = -192.0
-text = "Main Menu"
+offset_left = 472.0
+offset_top = 403.0
+offset_right = -472.0
+offset_bottom = -169.0
+theme = SubResource("Theme_8keqt")
+icon = ExtResource("9_glpoc")
+flat = true
+
+[node name="TittleCard" type="Sprite2D" parent="PauseMenu" unique_id=77491367]
+position = Vector2(576, 288)
+texture = ExtResource("9_i2vdq")
+offset = Vector2(50, 0)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=655309865]
 
 [connection signal="pressed" from="PauseMenu/ButtonContinue" to="PauseMenu" method="ToggleSetting"]
 [connection signal="pressed" from="PauseMenu/ButtonMainMenu" to="PauseMenu" method="MainMenu"]
