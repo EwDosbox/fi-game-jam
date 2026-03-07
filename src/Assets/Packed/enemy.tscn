@@ -16,9 +16,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2wu0s"]
-size = Vector2(50, 50)
+size = Vector2(50.108925, 49.4172)
 
 [node name="Enemy" type="Area2D" unique_id=292821970 node_paths=PackedStringArray("sprite")]
+scale = Vector2(1.2772176, 1.2950957)
 collision_layer = 256
 script = ExtResource("1_2wu0s")
 sprite = NodePath("AnimatedSprite2D")

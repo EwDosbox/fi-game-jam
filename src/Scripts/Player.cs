@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Threading.Tasks;
 
-public partial class Player : Node2D
+public partial class Player : CharacterBody2D
 {
 	#region Private Variables
 	[Export]
@@ -17,18 +17,7 @@ public partial class Player : Node2D
 	private AnimatedSprite2D sprite;
 	[Export]
 	private Grid gridScript;
-	[Export]
-	private Area2D hitbox;
-	[Export]
-	private RayCast2D rayCast;
 	#endregion
-	public override void _Ready()
-	{
-	}
-
-	public override void _Process(double delta)
-	{
-	}
 
 	public async Task SmoothMove(Vector2 direction)
 	{
@@ -43,35 +32,51 @@ public partial class Player : Node2D
 			bedPower = 1;
 
 		lastDirection = direction;
-		Vector2 movementVector = direction * (bedPower * gridScript.GridSize);
-
-		rayCast.TargetPosition = movementVector;
-		rayCast.ForceRaycastUpdate();
-
-		Vector2 finalTarget;
-
-		if (rayCast.IsColliding())
-		{
-			Vector2 hitPoint = rayCast.GetCollisionPoint();
-			finalTarget = hitPoint - (direction * 5);
-			bedPower = 1;
-		}
-		else
-			finalTarget = Position + movementVector;
-
-		finalTarget = finalTarget.Snapped(gridScript.GridVector);
+		Vector2 targetPosition = GlobalPosition + (direction * (bedPower * gridScript.GridSize));
+		targetPosition = targetPosition.Snapped(gridScript.GridVector);
 
 		sprite.Play("move");
 
 		Tween tween = CreateTween();
 		tween.SetEase(Tween.EaseType.Out);
 		tween.SetTrans(Tween.TransitionType.Quad);
-		tween.TweenProperty(this, "position", finalTarget, 0.15f);
 
-		await ToSignal(tween, Tween.SignalName.Finished);
+		await TweenPhysicsMove(targetPosition);
 
 		sprite.Play("idle");
 		isMoving = false;
+	}
+
+	private async Task TweenPhysicsMove(Vector2 target)
+	{
+		float duration = 0.2f;
+		float elapsed = 0.0f;
+		Vector2 startPos = GlobalPosition;
+
+		while (elapsed < duration)
+		{
+			float delta = (float)GetProcessDeltaTime();
+			elapsed += delta;
+
+			float t = Mathf.Clamp(elapsed / duration, 0, 1);
+			float curve = t * t * (3 - 2 * t);
+
+			Vector2 nextPoint = startPos.Lerp(target, curve);
+			Vector2 moveVelocity = nextPoint - GlobalPosition;
+
+			KinematicCollision2D collision = MoveAndCollide(moveVelocity);
+
+			if (collision != null)
+			{
+				bedPower = 1;
+				break;
+			}
+
+			await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
+
+		}
+
+		GlobalPosition = GlobalPosition.Snapped(gridScript.GridVector);
 	}
 
 	public void Touched(Node body)

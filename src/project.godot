@@ -53,6 +53,7 @@ pause={
 
 [layer_names]
 
+2d_physics/layer_5="Player"
 2d_physics/layer_7="Wall"
 2d_physics/layer_9="Enemy"
 
