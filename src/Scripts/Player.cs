@@ -16,7 +16,11 @@ public partial class Player : Node2D
 	[Export]
 	private AnimatedSprite2D sprite;
 	[Export]
-	public Grid gridScript;
+	private Grid gridScript;
+	[Export]
+	private Area2D hitbox;
+	[Export]
+	private RayCast2D rayCast;
 	#endregion
 	public override void _Ready()
 	{
@@ -32,7 +36,6 @@ public partial class Player : Node2D
 			return;
 		isMoving = true;
 
-		sprite.Play("move");
 
 		if (direction == lastDirection)
 			bedPower++;
@@ -40,14 +43,30 @@ public partial class Player : Node2D
 			bedPower = 1;
 
 		lastDirection = direction;
-		int move = bedPower * gridScript.GridSize;
+		Vector2 movementVector = direction * (bedPower * gridScript.GridSize);
 
-		Vector2 target = Position + direction * move;
-		target = target.Snapped(gridScript.GridVector);
+		rayCast.TargetPosition = movementVector;
+		rayCast.ForceRaycastUpdate();
+
+		Vector2 finalTarget;
+
+		if (rayCast.IsColliding())
+		{
+			Vector2 hitPoint = rayCast.GetCollisionPoint();
+			finalTarget = hitPoint - (direction * 5);
+			bedPower = 1;
+		}
+		else
+			finalTarget = Position + movementVector;
+
+		finalTarget = finalTarget.Snapped(gridScript.GridVector);
+
+		sprite.Play("move");
 
 		Tween tween = CreateTween();
 		tween.SetEase(Tween.EaseType.Out);
-		tween.TweenProperty(this, "position", target, 0.15f);
+		tween.SetTrans(Tween.TransitionType.Quad);
+		tween.TweenProperty(this, "position", finalTarget, 0.15f);
 
 		await ToSignal(tween, Tween.SignalName.Finished);
 
