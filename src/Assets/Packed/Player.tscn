@@ -6,10 +6,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ify7s"]
 size = Vector2(100, 50)
 
-[node name="Player" type="Area2D" unique_id=387095767 node_paths=PackedStringArray("sprite")]
+[node name="Player" type="Area2D" unique_id=387095767 node_paths=PackedStringArray("sprite", "hitbox", "rayCast")]
 collision_mask = 256
 script = ExtResource("1_ify7s")
 sprite = NodePath("AnimatedSprite2D")
+hitbox = NodePath(".")
+rayCast = NodePath("RayCast2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1010915438]
 rotation = 1.5707964
@@ -19,5 +21,9 @@ animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1104575477]
 shape = SubResource("RectangleShape2D_ify7s")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1353587954]
+enabled = false
+collision_mask = 64
 
 [connection signal="area_entered" from="." to="." method="Touched"]
