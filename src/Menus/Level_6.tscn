@@ -1,0 +1,34 @@
+[gd_scene format=4 uid="uid://xs0tfk0povkj"]
+
+[ext_resource type="PackedScene" uid="uid://d4hwciwdnl0xm" path="res://Assets/Packed/Level.tscn" id="1_r38n7"]
+[ext_resource type="PackedScene" uid="uid://dvm0q8m2ewvib" path="res://Assets/Packed/enemy_s.tscn" id="2_rmhck"]
+
+[node name="Level" unique_id=964451484 instance=ExtResource("1_r38n7")]
+
+[node name="Grid" parent="." index="1" unique_id=734412611]
+tile_map_data = PackedByteArray("AAD+/wAAAAAGAAUAAAD//wAAAAAGAAUAAAAAAP//AAAGAAUAAAAAAP7/AAAGAAUAAAD/////AAAGAAUAAAAAAAAAAAAGAAUAAAABAAAAAAAGAAUAAAABAP//AAAGAAUAAAABAP7/AAAGAAUAAAD///7/AAAGAAUAAAD9/wAAAAAGAAUAAAD9////AAAGAAUAAAD9//7/AAAGAAUAAAACAP7/AAAGAAUAAAACAP//AAAGAAUAAAACAAAAAAAGAAUAAAADAAAAAAAGAAUAAAAEAAAAAAAGAAUAAAAEAP//AAAGAAUAAAAEAP7/AAAGAAUAAAAFAP7/AAAGAAUAAAAFAP//AAAGAAUAAAAFAAAAAAAGAAUAAAD8//7/AAAGAAUAAAD8////AAAGAAUAAAD8/wAAAAAGAAUAAAD///3/AAAFAAUAAAAAAP3/AAAFAAUAAAABAP3/AAAFAAUAAAACAP3/AAAFAAUAAAABAPz/AAAFAAUAAAAAAPz/AAAFAAUAAAAAAPv/AAAFAAUAAAAAAPr/AAAFAAUAAAAAAPn/AAAFAAUAAAABAPn/AAAFAAUAAAABAPr/AAAFAAUAAAABAPv/AAAFAAUAAAD///n/AAAGAAUAAAD+//n/AAAGAAUAAAD9//n/AAAGAAUAAAD8//n/AAAGAAUAAAD8//r/AAAGAAUAAAD8//v/AAAGAAUAAAD8//z/AAAGAAUAAAD8//3/AAAGAAUAAAACAPn/AAAGAAUAAAADAPn/AAAGAAUAAAAEAPn/AAAGAAUAAAAFAPn/AAAGAAUAAAAFAPr/AAAGAAUAAAAFAPv/AAAGAAUAAAAFAPz/AAAGAAUAAAAFAP3/AAAGAAUAAAAAAPj/AAAGAAUAAAABAPj/AAAGAAUAAAAAAPf/AAAGAAUAAAABAPf/AAAGAAUAAAD7/wAAAAAGAAUAAAD6/wAAAAAGAAUAAAD5/wAAAAAGAAUAAAD4/wAAAAAGAAUAAAD3/wAAAAAGAAUAAAD2/wAAAAAGAAUAAAD9//r/AAAGAAUAAAD9//v/AAAGAAUAAAD9//z/AAAGAAUAAAD9//3/AAAGAAUAAAAEAPr/AAAGAAUAAAAEAPv/AAAGAAUAAAAEAPz/AAAGAAUAAAAEAP3/AAAGAAUAAAA=")
+
+[node name="Player" parent="." index="2" unique_id=1088235652]
+position = Vector2(50, 25)
+
+[node name="Camera2D" parent="." index="3" unique_id=655309865]
+offset = Vector2(0, -175)
+
+[node name="EnemyManager" parent="." index="4" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
+enemies = [NodePath("Enemy3"), NodePath("Enemy6"), NodePath("Enemy"), NodePath("Enemy2")]
+
+[node name="Enemy3" parent="EnemyManager" index="0" unique_id=2041763146 node_paths=PackedStringArray("gridScript") instance=ExtResource("2_rmhck")]
+position = Vector2(-75, 25)
+gridScript = NodePath("../../Grid")
+
+[node name="Enemy6" parent="EnemyManager" index="1" unique_id=982956684 node_paths=PackedStringArray("gridScript") instance=ExtResource("2_rmhck")]
+position = Vector2(175, 25)
+gridScript = NodePath("../../Grid")
+
+[node name="Enemy" parent="EnemyManager" index="2" unique_id=292821970 node_paths=PackedStringArray("gridScript") instance=ExtResource("2_rmhck")]
+position = Vector2(-175, -325)
+gridScript = NodePath("../../Grid")
+
+[node name="Enemy2" parent="EnemyManager" index="3" unique_id=1728613880 node_paths=PackedStringArray("gridScript") instance=ExtResource("2_rmhck")]
+position = Vector2(275, -325)
+gridScript = NodePath("../../Grid")

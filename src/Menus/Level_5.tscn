@@ -1,0 +1,36 @@
+[gd_scene format=4 uid="uid://b00as7rxg5naq"]
+
+[ext_resource type="PackedScene" uid="uid://d4hwciwdnl0xm" path="res://Assets/Packed/Level.tscn" id="1_uyskk"]
+[ext_resource type="PackedScene" uid="uid://dvm0q8m2ewvib" path="res://Assets/Packed/enemy_s.tscn" id="2_7cca5"]
+[ext_resource type="PackedScene" uid="uid://xs0tfk0povkj" path="res://Menus/Level_6.tscn" id="2_fmhml"]
+
+[node name="Level" unique_id=964451484 instance=ExtResource("1_uyskk")]
+
+[node name="Game" parent="." index="0" unique_id=479275414]
+nextScene = ExtResource("2_fmhml")
+
+[node name="Grid" parent="." index="1" unique_id=734412611]
+tile_map_data = PackedByteArray("AAD//wIAAAALAAIAAAD//wEAAAALAAIAAAAAAAEAAAALAAIAAAAAAAIAAAALAAIAAAD+/wEAAAALAAIAAAD9/wEAAAALAAIAAAD9/wIAAAALAAIAAAD+/wIAAAALAAIAAAD8/wIAAAALAAMAAAD8/wEAAAALAAMAAAABAAEAAAALAAMAAAABAAIAAAALAAMAAAACAAIAAAALAAMAAAACAAEAAAALAAMAAAADAAEAAAALAAMAAAADAAIAAAALAAMAAAD7/wIAAAALAAMAAAD7/wEAAAALAAMAAAD//wMAAAALAAIAAAD//wQAAAALAAIAAAD//wUAAAALAAIAAAD7/wAAAAALAAMAAAD8/wAAAAALAAMAAAD9/wAAAAALAAMAAAD+/wAAAAALAAMAAAD//wAAAAALAAMAAAAAAAAAAAALAAMAAAABAAAAAAALAAMAAAACAAAAAAALAAMAAAADAAAAAAALAAMAAAADAP//AAALAAMAAAD8////AAALAAMAAAD7////AAALAAMAAAACAP//AAALAAMAAAD/////AAALAAMAAAD///7/AAALAAMAAAD7//7/AAALAAMAAAD8//7/AAALAAMAAAD9//7/AAALAAMAAAD+//7/AAALAAMAAAAAAP7/AAALAAMAAAABAP7/AAALAAMAAAACAP7/AAALAAMAAAADAP7/AAALAAMAAAADAP3/AAALAAMAAAADAPz/AAALAAMAAAACAPz/AAALAAMAAAABAPz/AAALAAMAAAAAAPz/AAALAAMAAAD///z/AAALAAMAAAD+//z/AAALAAMAAAD9//z/AAALAAMAAAD8//z/AAALAAMAAAD7//z/AAALAAMAAAD7//3/AAALAAMAAAD8//3/AAALAAMAAAD9//3/AAALAAMAAAD+//3/AAALAAMAAAD///3/AAALAAMAAAAAAP3/AAALAAMAAAABAP3/AAALAAMAAAACAP3/AAALAAMAAAD///n/AAALAAMAAAD///r/AAALAAMAAAD///v/AAALAAMAAAD//wYAAAALAAMAAAD///j/AAALAAMAAAD//wcAAAAMAAYAAAD///f/AAAMAAYAAAA=")
+
+[node name="Player" parent="." index="2" unique_id=1088235652]
+position = Vector2(-225, 100)
+rotation = 1.5707964
+
+[node name="Camera2D" parent="." index="3" unique_id=655309865]
+offset = Vector2(0, -25)
+zoom = Vector2(0.7, 0.7)
+
+[node name="EnemyManager" parent="." index="4" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
+enemies = [NodePath("Enemy"), NodePath("Enemy2"), NodePath("Enemy3")]
+
+[node name="Enemy" parent="EnemyManager" index="0" unique_id=292821970 node_paths=PackedStringArray("gridScript") instance=ExtResource("2_7cca5")]
+position = Vector2(175, 25)
+gridScript = NodePath("../../Grid")
+
+[node name="Enemy2" parent="EnemyManager" index="1" unique_id=104960335 node_paths=PackedStringArray("gridScript") instance=ExtResource("2_7cca5")]
+position = Vector2(-225, -75)
+gridScript = NodePath("../../Grid")
+
+[node name="Enemy3" parent="EnemyManager" index="2" unique_id=2070374164 node_paths=PackedStringArray("gridScript") instance=ExtResource("2_7cca5")]
+position = Vector2(-25, -25)
+gridScript = NodePath("../../Grid")
