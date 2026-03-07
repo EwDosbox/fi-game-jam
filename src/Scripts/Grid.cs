@@ -7,7 +7,7 @@ public partial class Grid : Node2D
 	#endregion
 
 	#region Public Variables
-	[Export(PropertyHint.Range, "1,128,1")]
+	[Export]
 	public int GridSize
 	{
 		get { return gridSize; }

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://d2dg1bvueo8oq"]
+
+[ext_resource type="Script" uid="uid://mevoyu51ds8y" path="res://Scripts/Enemy.cs" id="1_2wu0s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2wu0s"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2wu0s"]
+size = Vector2(20, 21)
+
+[node name="Enemy" type="Node2D" unique_id=1798319853]
+script = ExtResource("1_2wu0s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=409386753]
+sprite_frames = SubResource("SpriteFrames_2wu0s")
+animation = &"walk"
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=307086946]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=938620685]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_2wu0s")

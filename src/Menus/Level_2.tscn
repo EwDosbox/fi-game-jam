@@ -1,8 +1,11 @@
-[gd_scene format=3 uid="uid://dfirpmfsoceqm"]
+[gd_scene format=4 uid="uid://dfirpmfsoceqm"]
 
 [ext_resource type="PackedScene" uid="uid://d4hwciwdnl0xm" path="res://Assets/Packed/Level.tscn" id="1_ryu3x"]
 
 [node name="Level" unique_id=964451484 instance=ExtResource("1_ryu3x")]
 
-[node name="EnemyManager" parent="." index="4" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
-enemies = []
+[node name="Grid" parent="." index="1" unique_id=734412611]
+tile_map_data = PackedByteArray("AAAAAP//AAABAAEAAAD/////AAABAAEAAAD//wAAAAABAAEAAAAAAAAAAAABAAEAAAABAAAAAAABAAEAAAABAP//AAABAAEAAAABAP7/AAABAAEAAAABAP3/AAABAAEAAAAAAP3/AAABAAEAAAD///3/AAABAAEAAAD+//7/AAABAAEAAAD9//7/AAABAAEAAAD8//7/AAABAAEAAAD7////AAABAAEAAAD8////AAABAAEAAAD9////AAABAAEAAAD+////AAABAAEAAAACAP//AAABAAEAAAADAP//AAABAAEAAAD///7/AAABAAEAAAACAAAAAAABAAEAAAADAAEAAAABAAEAAAACAAEAAAABAAEAAAD+/wAAAAABAAEAAAADAAAAAAABAAEAAAAEAAAAAAABAAEAAAAFAAAAAAABAAEAAAAGAAAAAAABAAEAAAA=")
+
+[node name="Player" parent="." index="2" unique_id=1088235652]
+position = Vector2(0, -25)
