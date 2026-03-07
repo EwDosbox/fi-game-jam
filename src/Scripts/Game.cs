@@ -14,6 +14,10 @@ public partial class Game : Node2D
 	#region References
 	[Export]
 	private Player PlayerScript;
+	[Export]
+	private EnemyManager enemyManager;
+	[Export]
+	private PackedScene nextScene;
 	#endregion
 
 	public override void _Ready()
@@ -47,7 +51,7 @@ public partial class Game : Node2D
 	{
 		isTurnRunning = true;
 
-		// Enemies
+		await enemyManager.MoveAll();
 
 		await PlayerScript.SmoothMove(playerDirection);
 
@@ -55,6 +59,15 @@ public partial class Game : Node2D
 
 		await ToSignal(GetTree().CreateTimer(0.2f), SceneTreeTimer.SignalName.Timeout);
 
+		if (enemyManager.AllEnemiesDead)
+			NextScene();
+
 		isTurnRunning = false;
+	}
+
+	private void NextScene()
+	{
+		if (nextScene != null)
+			GetTree().ChangeSceneToPacked(nextScene);
 	}
 }

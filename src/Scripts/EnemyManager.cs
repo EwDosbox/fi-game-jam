@@ -1,5 +1,6 @@
 using Godot;
-using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 public partial class EnemyManager : Node2D
 {
@@ -7,9 +8,15 @@ public partial class EnemyManager : Node2D
 	#endregion
 
 	#region Public Variables
+	public bool AllEnemiesDead
+	{
+		get { return enemies.All(f => f.isDead); }
+	}
 	#endregion
 
 	#region References
+	[Export]
+	private Enemy[] enemies;
 	#endregion
 
 	public override void _Ready()
@@ -18,5 +25,14 @@ public partial class EnemyManager : Node2D
 
 	public override void _Process(double delta)
 	{
+	}
+
+	public async Task MoveAll()
+	{
+		foreach (Enemy en in enemies)
+		{
+			await en.SmoothMove();
+		}
+
 	}
 }

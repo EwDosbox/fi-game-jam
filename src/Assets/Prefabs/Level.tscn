@@ -6,22 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d1ctb6cckoeyo" path="res://Assets/Prefabs/Player.tscn" id="4_igmha"]
 [ext_resource type="Script" uid="uid://cxx03iwba30vp" path="res://Scripts/EnemyManager.cs" id="5_mctwc"]
 
-[sub_resource type="GDScript" id="GDScript_vx5ek"]
-script/source = "extends Node2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
-
 [node name="Level" type="Node2D" unique_id=964451484]
-script = SubResource("GDScript_vx5ek")
 
 [node name="Game" type="Node2D" parent="." unique_id=479275414 node_paths=PackedStringArray("PlayerScript")]
 script = ExtResource("1_b7ecg")
