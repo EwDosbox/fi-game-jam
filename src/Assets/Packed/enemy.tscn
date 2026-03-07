@@ -18,13 +18,13 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2wu0s"]
 size = Vector2(50.108925, 49.4172)
 
-[node name="Enemy" type="CharacterBody2D" unique_id=665808320 node_paths=PackedStringArray("sprite", "collision")]
+[node name="Enemy" type="CharacterBody2D" unique_id=665808320 node_paths=PackedStringArray("Sprite", "Collision")]
 scale = Vector2(1.2772176, 1.2950957)
 collision_layer = 256
 collision_mask = 336
 script = ExtResource("1_2wu0s")
-sprite = NodePath("AnimatedSprite2D")
-collision = NodePath("CollisionShape2D")
+Sprite = NodePath("AnimatedSprite2D")
+Collision = NodePath("CollisionShape2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=409386753]
 sprite_frames = SubResource("SpriteFrames_2wu0s")
