@@ -13,7 +13,7 @@ sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1010915438]
 rotation = 1.5707964
-scale = Vector2(0.05, 0.05)
+scale = Vector2(0.25, 0.25)
 sprite_frames = ExtResource("2_ify7s")
 animation = &"idle"
 

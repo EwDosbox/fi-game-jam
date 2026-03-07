@@ -8,12 +8,8 @@
 [node name="Grid" parent="." index="1" unique_id=734412611]
 tile_map_data = PackedByteArray("AAAAAP//AAABAAEAAAD/////AAABAAEAAAD//wAAAAABAAEAAAAAAAAAAAABAAEAAAABAAAAAAABAAEAAAABAP//AAABAAEAAAABAP7/AAABAAEAAAABAP3/AAABAAEAAAAAAP3/AAABAAEAAAD///3/AAABAAEAAAD+//7/AAABAAEAAAD9//7/AAABAAEAAAD8//7/AAABAAEAAAD7////AAABAAEAAAD8////AAABAAEAAAD9////AAABAAEAAAD+////AAABAAEAAAACAP//AAABAAEAAAADAP//AAABAAEAAAD///7/AAABAAEAAAACAAAAAAABAAEAAAADAAEAAAABAAEAAAACAAEAAAABAAEAAAD+/wAAAAABAAEAAAADAAAAAAABAAEAAAAEAAAAAAABAAEAAAAFAAAAAAABAAEAAAAGAAAAAAABAAEAAAA=")
 
-[node name="Player" parent="." index="2" unique_id=1088235652]
-position = Vector2(0, -25)
-
 [node name="EnemyManager" parent="." index="4" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
 enemies = [NodePath("Enemy")]
 
-[node name="Enemy" parent="EnemyManager" index="0" unique_id=1798319853 node_paths=PackedStringArray("gridScript") instance=ExtResource("2_x1wte")]
+[node name="Enemy" parent="EnemyManager" index="0" unique_id=1798319853 instance=ExtResource("2_x1wte")]
 position = Vector2(227, 24)
-gridScript = NodePath("../../Grid")

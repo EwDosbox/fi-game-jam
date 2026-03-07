@@ -20,6 +20,7 @@ script = ExtResource("2_jr45x")
 GridSize = 50
 
 [node name="Player" parent="." unique_id=1088235652 node_paths=PackedStringArray("gridScript") instance=ExtResource("4_igmha")]
+position = Vector2(0, -25)
 gridScript = NodePath("../Grid")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=655309865]
