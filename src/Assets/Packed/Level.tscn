@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dlxvbs46si0oc" path="res://Scripts/Game.cs" id="1_b7ecg"]
 [ext_resource type="TileSet" uid="uid://b8u1i3mo41fqi" path="res://Assets/tile_set.tres" id="2_3pl1g"]
 [ext_resource type="Script" uid="uid://bmq8i1fs2o5nx" path="res://Scripts/Grid.cs" id="2_jr45x"]
+[ext_resource type="PackedScene" uid="uid://78hao23dmub0" path="res://Menus/Level_1.tscn" id="2_yhlvr"]
 [ext_resource type="PackedScene" uid="uid://d1ctb6cckoeyo" path="res://Assets/Packed/Player.tscn" id="4_igmha"]
 [ext_resource type="Script" uid="uid://cxx03iwba30vp" path="res://Scripts/EnemyManager.cs" id="5_mctwc"]
 [ext_resource type="Texture2D" uid="uid://o41q14npfmd2" path="res://Assets/Images/CosmicLilac_Tiles.png" id="6_t7f6x"]
@@ -14,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bm5dyc600l4u" path="res://Assets/Images/purple background.png" id="12_7bnyv"]
 [ext_resource type="Script" uid="uid://dp1r3ftrkr3tw" path="res://Assets/Packed/SoundEffects.cs" id="13_8rqxw"]
 [ext_resource type="Script" uid="uid://dv13xmndpxl6m" path="res://Assets/Packed/DeathMenu.cs" id="13_jm442"]
-[ext_resource type="Script" uid="uid://cdicamxth3mxk" path="res://Assets/Packed/BedPowerCounter.cs" id="13_s6o11"]
+[ext_resource type="Script" path="res://Assets/Packed/BedPowerCounter.cs" id="13_s6o11"]
 [ext_resource type="AudioStream" uid="uid://crw55hho2suo8" path="res://Assets/Audio/player-move.mp3" id="14_qedcw"]
 [ext_resource type="AudioStream" uid="uid://bwrs2gedxa8pi" path="res://Assets/Audio/player-death.mp3" id="15_n6n4o"]
 [ext_resource type="AudioStream" uid="uid://bpca6m5s0vxys" path="res://Assets/Audio/enemy-explosion.mp3" id="16_s6o11"]
@@ -254,6 +255,7 @@ font_size = 32
 script = ExtResource("1_b7ecg")
 PlayerScript = NodePath("../Player")
 enemyManager = NodePath("../EnemyManager")
+nextScene = ExtResource("2_yhlvr")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1106616829]
 position = Vector2(-249, -104.00001)

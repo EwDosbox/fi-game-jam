@@ -8,7 +8,6 @@
 
 [node name="Game" parent="." index="0" unique_id=479275414]
 nextScene = ExtResource("2_f6qxo")
-thisScene = null
 
 [node name="Grid" parent="." index="2" unique_id=734412611]
 tile_map_data = PackedByteArray("AAD5//7/AAAIAAMAAAD5////AAAIAAMAAAD5/wAAAAAIAAMAAAD6/wAAAAAIAAMAAAD7/wAAAAAIAAMAAAD8/wAAAAAIAAMAAAD9/wAAAAAIAAMAAAD8////AAAIAAMAAAD8//7/AAAIAAMAAAD7//7/AAAIAAMAAAD6//7/AAAIAAMAAAD9////AAAIAAMAAAD+////AAAIAAMAAAD/////AAAIAAMAAAAAAP//AAAIAAMAAAABAP//AAAIAAMAAAACAP//AAAIAAMAAAADAP//AAAIAAMAAAAEAP//AAAIAAMAAAAFAP//AAAIAAMAAAAGAP7/AAAIAAMAAAAGAP//AAAIAAMAAAAGAAAAAAAIAAMAAAAFAAAAAAAIAAMAAAAEAAAAAAAIAAMAAAADAAAAAAAIAAMAAAACAAAAAAAIAAMAAAABAAAAAAAIAAMAAAAAAAAAAAAIAAMAAAD//wAAAAAIAAMAAAD+/wAAAAAIAAMAAAD9//7/AAAIAAMAAAD+//7/AAAIAAMAAAD///7/AAAIAAMAAAAAAP7/AAAIAAMAAAABAP7/AAAIAAMAAAACAP7/AAAIAAMAAAADAP7/AAAIAAMAAAAEAP7/AAAIAAMAAAAFAP7/AAAIAAMAAAD6////AAAIAAMAAAD7////AAAIAAMAAAA=")
@@ -16,20 +15,24 @@ tile_map_data = PackedByteArray("AAD5//7/AAAIAAMAAAD5////AAAIAAMAAAD5/wAAAAAIAAM
 [node name="EnemyManager" parent="." index="3" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
 enemies = [NodePath("Enemy"), NodePath("Enemy2"), NodePath("Enemy3"), NodePath("Enemy4")]
 
-[node name="Enemy" parent="EnemyManager" index="0" unique_id=292821970 node_paths=PackedStringArray("sound") instance=ExtResource("3_shpnx")]
+[node name="Enemy" parent="EnemyManager" index="0" unique_id=292821970 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_shpnx")]
 position = Vector2(160, -32)
+gridScript = NodePath("../../Grid")
 sound = NodePath("../../SoundEffects")
 
-[node name="Enemy2" parent="EnemyManager" index="1" unique_id=1300741245 node_paths=PackedStringArray("sound") instance=ExtResource("3_shpnx")]
+[node name="Enemy2" parent="EnemyManager" index="1" unique_id=1300741245 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_shpnx")]
 position = Vector2(224, -32)
+gridScript = NodePath("../../Grid")
 sound = NodePath("../../SoundEffects")
 
-[node name="Enemy3" parent="EnemyManager" index="2" unique_id=54865472 node_paths=PackedStringArray("sound") instance=ExtResource("3_shpnx")]
+[node name="Enemy3" parent="EnemyManager" index="2" unique_id=54865472 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_shpnx")]
 position = Vector2(288, -32)
+gridScript = NodePath("../../Grid")
 sound = NodePath("../../SoundEffects")
 
-[node name="Enemy4" parent="EnemyManager" index="3" unique_id=1199777974 node_paths=PackedStringArray("sound") instance=ExtResource("3_shpnx")]
+[node name="Enemy4" parent="EnemyManager" index="3" unique_id=1199777974 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_shpnx")]
 position = Vector2(352, -32)
+gridScript = NodePath("../../Grid")
 sound = NodePath("../../SoundEffects")
 
 [node name="Player" parent="." index="4" unique_id=1088235652]
@@ -48,6 +51,7 @@ text = "Thus YOU, Deepys bed, MUST FIGHT!!!"
 
 [node name="Camera2D" parent="." index="8" unique_id=655309865]
 position = Vector2(0, -32)
+script = null
 
 [node name="ButtonRestart" parent="DeathMenu" parent_id_path=PackedInt32Array(1597040886) index="1" unique_id=944853072]
 flat = true
