@@ -270,7 +270,7 @@ sound = NodePath("../SoundEffects")
 [node name="Boundary" type="TileMapLayer" parent="." unique_id=1288459111]
 tile_set = SubResource("TileSet_c3tdy")
 
-[node name="PauseMenu" type="Control" parent="." unique_id=1264981098]
+[node name="PauseMenu" type="Control" parent="." unique_id=1264981098 node_paths=PackedStringArray("game", "player")]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -284,6 +284,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("8_8keqt")
 MainMenuScene = ExtResource("9_7bnyv")
+game = NodePath("../Game")
+player = NodePath("../Player")
 
 [node name="ColorRect" type="ColorRect" parent="PauseMenu" unique_id=1539306798]
 layout_mode = 1
