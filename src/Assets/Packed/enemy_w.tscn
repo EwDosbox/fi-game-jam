@@ -3,15 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://d2dg1bvueo8oq" path="res://Assets/Packed/enemy.tscn" id="1_iikm6"]
 [ext_resource type="Script" uid="uid://wcmiiiwg1pbt" path="res://Scripts/EnemyW.cs" id="2_0wopc"]
 [ext_resource type="Texture2D" uid="uid://dietcwoc1r3w2" path="res://Assets/Images/walking-evil-guy-sheet.png" id="3_t1ldn"]
-[ext_resource type="Texture2D" uid="uid://barq67eed08is" path="res://icon.svg" id="4_yhykf"]
+[ext_resource type="Texture2D" uid="uid://lqmu1n2xuisw" path="res://Assets/Images/walking-evil-guy-splat.png" id="4_yhykf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t1ldn"]
 atlas = ExtResource("3_t1ldn")
 region = Rect2(1024, 0, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_swoip"]
-atlas = ExtResource("4_yhykf")
-region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yhykf"]
 atlas = ExtResource("3_t1ldn")
@@ -45,7 +41,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_swoip")
+"texture": ExtResource("4_yhykf")
 }],
 "loop": true,
 "name": &"dead",

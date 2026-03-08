@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://crw55hho2suo8" path="res://Assets/Audio/player-move.mp3" id="14_qedcw"]
 [ext_resource type="AudioStream" uid="uid://bwrs2gedxa8pi" path="res://Assets/Audio/player-death.mp3" id="15_n6n4o"]
 [ext_resource type="AudioStream" uid="uid://bpca6m5s0vxys" path="res://Assets/Audio/enemy-explosion.mp3" id="16_s6o11"]
+[ext_resource type="Texture2D" uid="uid://dh3qx4pl464qv" path="res://Assets/Images/retry button.png" id="18_n6n4o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_62dxq"]
 texture = ExtResource("6_t7f6x")
@@ -248,7 +249,7 @@ PlayerScript = NodePath("../Player")
 enemyManager = NodePath("../EnemyManager")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1106616829]
-position = Vector2(-192, -160)
+position = Vector2(-249, -104.00001)
 scale = Vector2(29.41, 18.58)
 texture = ExtResource("12_7bnyv")
 
@@ -385,19 +386,49 @@ pauseMenu = NodePath("../PauseMenu")
 player = NodePath("../Player")
 
 [node name="ColorRect" type="ColorRect" parent="DeathMenu" unique_id=900272149]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -690.5
+offset_top = -371.0
+offset_right = 690.5
+offset_bottom = 371.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.663686, 0.1581657, 0.3206267, 0.4509804)
 
 [node name="ButtonRestart" type="Button" parent="DeathMenu" unique_id=944853072]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -34.0
+offset_right = 104.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("18_n6n4o")
 
 [node name="ButtonMainMenu" type="Button" parent="DeathMenu" unique_id=8735895]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = 44.0
+offset_right = 102.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("9_glpoc")
 
 [connection signal="pressed" from="PauseMenu/ButtonContinue" to="PauseMenu" method="ToggleSetting"]
 [connection signal="pressed" from="PauseMenu/ButtonMainMenu" to="PauseMenu" method="MainMenu"]
