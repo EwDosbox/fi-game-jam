@@ -60,3 +60,6 @@ position = Vector2(288, -224)
 
 [node name="Loop2" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="3" unique_id=265319357]
 position = Vector2(288, 160)
+
+[node name="DeathMenu" parent="." index="10" unique_id=1597040886]
+visible = true

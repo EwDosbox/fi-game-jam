@@ -53,9 +53,39 @@ sound = NodePath("../../SoundEffects")
 [node name="Player" parent="." index="4" unique_id=1088235652]
 position = Vector2(-384, -32)
 
+[node name="PauseMenu" parent="." index="6" unique_id=1264981098]
+offset_left = -570.0
+offset_top = -571.0
+offset_right = -570.0
+offset_bottom = -571.0
+
 [node name="Camera2D" parent="." index="7" unique_id=655309865]
 position = Vector2(-32, -352)
 zoom = Vector2(0.7, 0.7)
 
 [node name="Markers" parent="." index="8" unique_id=267341264]
 position = Vector2(32, -192)
+
+[node name="DeathMenu" parent="." index="10" unique_id=1597040886]
+visible = true
+offset_left = -179.0
+offset_top = -273.0
+offset_right = -139.0
+offset_bottom = -233.0
+
+[node name="ColorRect" parent="DeathMenu" index="0" unique_id=900272149]
+offset_left = -705.0
+offset_top = -579.0
+offset_right = 959.0
+
+[node name="ButtonRestart" parent="DeathMenu" index="1" unique_id=944853072]
+offset_left = 63.0
+offset_top = -35.0
+offset_right = 271.0
+offset_bottom = 33.0
+
+[node name="ButtonMainMenu" parent="DeathMenu" index="2" unique_id=8735895]
+offset_left = 63.0
+offset_top = 29.0
+offset_right = 271.0
+offset_bottom = 97.0

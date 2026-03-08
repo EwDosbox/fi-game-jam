@@ -40,3 +40,21 @@ tile_map_data = PackedByteArray("AAD6//z/AAAAAAEAAAD6//3/AAAAAAEAAAD6//7/AAAAAAE
 [node name="Camera2D" parent="." index="7" unique_id=655309865]
 offset = Vector2(0, -25)
 zoom = Vector2(0.5, 0.5)
+
+[node name="ColorRect" parent="DeathMenu" parent_id_path=PackedInt32Array(1597040886) index="0" unique_id=900272149]
+offset_left = -1204.0
+offset_top = -724.0
+offset_right = 1164.0
+offset_bottom = 652.0
+
+[node name="ButtonRestart" parent="DeathMenu" parent_id_path=PackedInt32Array(1597040886) index="1" unique_id=944853072]
+anchors_preset = -1
+anchor_top = -0.35000002
+offset_left = -116.0
+offset_top = 14.000001
+offset_right = 92.0
+offset_bottom = 48.0
+
+[node name="ButtonMainMenu" parent="DeathMenu" parent_id_path=PackedInt32Array(1597040886) index="2" unique_id=8735895]
+offset_left = -116.0
+offset_right = 92.0

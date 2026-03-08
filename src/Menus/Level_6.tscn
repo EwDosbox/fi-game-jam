@@ -76,3 +76,13 @@ offset_bottom = -168.0
 position = Vector2(0, -64)
 offset = Vector2(0, -175)
 zoom = Vector2(0.8, 0.8)
+
+[node name="DeathMenu" parent="." index="10" unique_id=1597040886]
+offset_top = -256.0
+offset_bottom = -216.0
+
+[node name="ColorRect" parent="DeathMenu" index="0" unique_id=900272149]
+offset_left = -756.0
+offset_top = -436.0
+offset_right = 716.0
+offset_bottom = 428.0
