@@ -22,5 +22,6 @@ public partial class EnemyManager : Node2D
 		{
 			await en.SmoothMove();
 		}
+
 	}
 }
