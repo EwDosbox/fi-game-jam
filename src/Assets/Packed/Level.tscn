@@ -240,7 +240,7 @@ sources/0 = SubResource("TileSetAtlasSource_62dxq")
 
 [sub_resource type="Theme" id="Theme_8keqt"]
 
-[node name="Level2" type="Node2D" unique_id=964451484]
+[node name="Level" type="Node2D" unique_id=964451484]
 
 [node name="Game" type="Node2D" parent="." unique_id=479275414 node_paths=PackedStringArray("PlayerScript", "enemyManager")]
 script = ExtResource("1_b7ecg")
