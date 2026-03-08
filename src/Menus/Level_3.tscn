@@ -31,6 +31,12 @@ tile_map_data = PackedByteArray("AAD7//n/AAAAAAEAAAD7//r/AAAAAAEAAAD7//v/AAAAAAE
 offset = Vector2(0, -25)
 zoom = Vector2(0.65, 0.65)
 
+[node name="BedPower" parent="Camera2D" index="0" unique_id=368550984]
+offset_left = -864.0
+offset_top = -512.0
+offset_right = -690.0
+offset_bottom = -448.0
+
 [node name="ColorRect" parent="DeathMenu" parent_id_path=PackedInt32Array(1597040886) index="0" unique_id=900272149]
 offset_left = -916.0
 offset_top = -564.0

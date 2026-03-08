@@ -63,11 +63,16 @@ offset_bottom = -571.0
 position = Vector2(-32, -352)
 zoom = Vector2(0.7, 0.7)
 
+[node name="BedPower" parent="Camera2D" index="0" unique_id=368550984]
+offset_left = -800.0
+offset_top = -448.0
+offset_right = -626.0
+offset_bottom = -384.0
+
 [node name="Markers" parent="." index="8" unique_id=267341264]
 position = Vector2(32, -192)
 
 [node name="DeathMenu" parent="." index="10" unique_id=1597040886]
-visible = true
 offset_left = -179.0
 offset_top = -273.0
 offset_right = -139.0

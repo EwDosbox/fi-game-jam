@@ -12,11 +12,10 @@ nextScene = ExtResource("2_8xoyb")
 [node name="Grid" parent="." index="2" unique_id=734412611]
 tile_map_data = PackedByteArray("AAD/////AAAIAAMAAAD//wAAAAAIAAMAAAAAAAAAAAAIAAMAAAAAAP//AAAIAAMAAAD+////AAAIAAMAAAD+/wAAAAAIAAMAAAABAAAAAAAIAAMAAAABAP//AAAIAAMAAAABAP7/AAAIAAMAAAAAAP7/AAAIAAMAAAD///7/AAAIAAMAAAD+//7/AAAIAAMAAAA=")
 
-[node name="Camera2D" parent="." index="7" unique_id=655309865 node_paths=PackedStringArray("player")]
+[node name="Camera2D" parent="." index="7" unique_id=655309865]
 limit_enabled = false
 position_smoothing_enabled = true
 script = ExtResource("3_jn0iq")
-player = NodePath("../Player")
 
 [node name="Markers" parent="." index="8" unique_id=267341264]
 position = Vector2(14, -360)

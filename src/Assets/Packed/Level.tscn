@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bm5dyc600l4u" path="res://Assets/Images/purple background.png" id="12_7bnyv"]
 [ext_resource type="Script" uid="uid://dp1r3ftrkr3tw" path="res://Assets/Packed/SoundEffects.cs" id="13_8rqxw"]
 [ext_resource type="Script" uid="uid://dv13xmndpxl6m" path="res://Assets/Packed/DeathMenu.cs" id="13_jm442"]
+[ext_resource type="Script" uid="uid://cdicamxth3mxk" path="res://Assets/Packed/BedPowerCounter.cs" id="13_s6o11"]
 [ext_resource type="AudioStream" uid="uid://crw55hho2suo8" path="res://Assets/Audio/player-move.mp3" id="14_qedcw"]
 [ext_resource type="AudioStream" uid="uid://bwrs2gedxa8pi" path="res://Assets/Audio/player-death.mp3" id="15_n6n4o"]
 [ext_resource type="AudioStream" uid="uid://bpca6m5s0vxys" path="res://Assets/Audio/enemy-explosion.mp3" id="16_s6o11"]
@@ -241,6 +242,12 @@ sources/0 = SubResource("TileSetAtlasSource_62dxq")
 
 [sub_resource type="Theme" id="Theme_8keqt"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_n6n4o"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_s6o11"]
+font_size = 32
+
 [node name="Level" type="Node2D" unique_id=964451484]
 
 [node name="Game" type="Node2D" parent="." unique_id=479275414 node_paths=PackedStringArray("PlayerScript", "enemyManager")]
@@ -355,7 +362,25 @@ position = Vector2(576, 288)
 texture = ExtResource("9_i2vdq")
 offset = Vector2(50, 0)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=655309865]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=655309865 node_paths=PackedStringArray("player", "number")]
+script = ExtResource("13_s6o11")
+player = NodePath("../Player")
+number = NodePath("BedPower/Number")
+
+[node name="BedPower" type="Label" parent="Camera2D" unique_id=368550984]
+offset_left = -576.0
+offset_top = -320.0
+offset_right = -402.0
+offset_bottom = -256.0
+text = "BedPower: "
+label_settings = SubResource("LabelSettings_n6n4o")
+
+[node name="Number" type="Label" parent="Camera2D/BedPower" unique_id=2026557834]
+layout_mode = 0
+offset_left = 173.0
+offset_right = 237.0
+offset_bottom = 64.0
+label_settings = SubResource("LabelSettings_s6o11")
 
 [node name="Markers" type="Node2D" parent="." unique_id=267341264]
 

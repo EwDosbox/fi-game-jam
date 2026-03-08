@@ -30,21 +30,24 @@ tile_map_data = PackedByteArray("AAD7//n/AAAAAAEAAAD7//r/AAAAAAEAAAD7//v/AAAAAAE
 offset = Vector2(0, -25)
 zoom = Vector2(0.65, 0.65)
 
-[node name="DeathMenu" parent="." index="10" unique_id=1597040886]
-visible = true
+[node name="BedPower" parent="Camera2D" index="0" unique_id=368550984]
+offset_left = -864.0
+offset_top = -512.0
+offset_right = -690.0
+offset_bottom = -448.0
 
-[node name="ColorRect" parent="DeathMenu" index="0" unique_id=900272149]
+[node name="ColorRect" parent="DeathMenu" parent_id_path=PackedInt32Array(1597040886) index="0" unique_id=900272149]
 offset_left = -916.0
 offset_top = -564.0
 offset_right = 876.0
 offset_bottom = 460.0
 
-[node name="ButtonRestart" parent="DeathMenu" index="1" unique_id=944853072]
+[node name="ButtonRestart" parent="DeathMenu" parent_id_path=PackedInt32Array(1597040886) index="1" unique_id=944853072]
 offset_left = -116.0
 offset_top = -20.0
 offset_right = 92.0
 offset_bottom = 48.0
 
-[node name="ButtonMainMenu" parent="DeathMenu" index="2" unique_id=8735895]
+[node name="ButtonMainMenu" parent="DeathMenu" parent_id_path=PackedInt32Array(1597040886) index="2" unique_id=8735895]
 offset_left = -116.0
 offset_right = 92.0

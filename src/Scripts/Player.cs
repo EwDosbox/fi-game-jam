@@ -13,6 +13,7 @@ public partial class Player : CharacterBody2D
 	#endregion
 	#region Public Variables
 	public bool IsDead { get { return isDead; } set { isDead = value; } }
+	public int BedPower { get { return bedPower; } }
 	#endregion
 	#region References
 	[Export]

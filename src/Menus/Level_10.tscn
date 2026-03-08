@@ -36,7 +36,7 @@ tile_map_data = PackedByteArray("AAD5//r/AAABAAAAAAD6//r/AAACAAAAAAD7//r/AAABAAA
 script = null
 
 [node name="Camera2D" parent="." index="7" unique_id=655309865]
-position = Vector2(0, -32)
+position = Vector2(-96, -32)
 
 [node name="turn" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="0" unique_id=1018392838]
 position = Vector2(-160, 224)
@@ -44,8 +44,5 @@ position = Vector2(-160, 224)
 [node name="start" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="1" unique_id=1886683559]
 position = Vector2(-160, -288)
 
-[node name="DeathMenu" parent="." index="10" unique_id=1597040886]
-visible = true
-
-[node name="ColorRect" parent="DeathMenu" index="0" unique_id=900272149]
+[node name="ColorRect" parent="DeathMenu" parent_id_path=PackedInt32Array(1597040886) index="0" unique_id=900272149]
 offset_top = -404.0
