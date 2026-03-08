@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://byde8jiqte22l" path="res://Assets/Images/play-button.png" id="3_5ncg0"]
 [ext_resource type="Texture2D" uid="uid://ckkpoe47wtigt" path="res://Assets/Images/tittle-card.png" id="3_7ihqj"]
 [ext_resource type="Texture2D" uid="uid://dsuw2c1x0xyfg" path="res://Assets/Images/eepy-deepy-mainmenu.png" id="4_n6o36"]
+[ext_resource type="Texture2D" uid="uid://b4kmkqmldc4rk" path="res://Assets/Images/exit-button.png" id="5_1txdl"]
 
 [node name="MainMenu" type="Control" unique_id=526585807]
 layout_mode = 3
@@ -35,11 +36,12 @@ flat = true
 
 [node name="ButtonExit" type="Button" parent="." unique_id=345739139]
 layout_mode = 0
-offset_left = -96.0
-offset_top = 160.0
-offset_right = 96.0
-offset_bottom = 224.0
-text = "Exit"
+offset_left = -95.0
+offset_top = 93.0
+offset_right = 113.0
+offset_bottom = 161.0
+icon = ExtResource("5_1txdl")
+flat = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1780711944]
 position = Vector2(7, 44)
