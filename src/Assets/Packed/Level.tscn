@@ -14,6 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://bm5dyc600l4u" path="res://Assets/Images/purple background.png" id="12_7bnyv"]
 [ext_resource type="Script" uid="uid://dp1r3ftrkr3tw" path="res://Assets/Packed/SoundEffects.cs" id="13_8rqxw"]
 [ext_resource type="Script" uid="uid://dv13xmndpxl6m" path="res://Assets/Packed/DeathMenu.cs" id="13_jm442"]
+[ext_resource type="AudioStream" uid="uid://crw55hho2suo8" path="res://Assets/Audio/player-move.mp3" id="14_qedcw"]
+[ext_resource type="AudioStream" uid="uid://bwrs2gedxa8pi" path="res://Assets/Audio/player-death.mp3" id="15_n6n4o"]
+[ext_resource type="AudioStream" uid="uid://bpca6m5s0vxys" path="res://Assets/Audio/enemy-explosion.mp3" id="16_s6o11"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_62dxq"]
 texture = ExtResource("6_t7f6x")
@@ -237,7 +240,7 @@ sources/0 = SubResource("TileSetAtlasSource_62dxq")
 
 [sub_resource type="Theme" id="Theme_8keqt"]
 
-[node name="Level" type="Node2D" unique_id=964451484]
+[node name="Level2" type="Node2D" unique_id=964451484]
 
 [node name="Game" type="Node2D" parent="." unique_id=479275414 node_paths=PackedStringArray("PlayerScript", "enemyManager")]
 script = ExtResource("1_b7ecg")
@@ -267,7 +270,7 @@ sound = NodePath("../SoundEffects")
 [node name="Boundary" type="TileMapLayer" parent="." unique_id=1288459111]
 tile_set = SubResource("TileSet_c3tdy")
 
-[node name="PauseMenu" type="Control" parent="." unique_id=1264981098 node_paths=PackedStringArray("game", "player")]
+[node name="PauseMenu" type="Control" parent="." unique_id=1264981098]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -281,8 +284,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("8_8keqt")
 MainMenuScene = ExtResource("9_7bnyv")
-game = NodePath("../Game")
-player = NodePath("../Player")
 
 [node name="ColorRect" type="ColorRect" parent="PauseMenu" unique_id=1539306798]
 layout_mode = 1
@@ -355,14 +356,20 @@ offset = Vector2(50, 0)
 
 [node name="Markers" type="Node2D" parent="." unique_id=267341264]
 
-[node name="SoundEffects" type="Node2D" parent="." unique_id=1635830495]
+[node name="SoundEffects" type="Node2D" parent="." unique_id=1635830495 node_paths=PackedStringArray("playerMove", "playerDead", "EnemyDead")]
 script = ExtResource("13_8rqxw")
+playerMove = NodePath("PlayerMove")
+playerDead = NodePath("PlayerDead")
+EnemyDead = NodePath("EnemyDead")
 
 [node name="PlayerMove" type="AudioStreamPlayer2D" parent="SoundEffects" unique_id=1794229907]
+stream = ExtResource("14_qedcw")
 
 [node name="PlayerDead" type="AudioStreamPlayer2D" parent="SoundEffects" unique_id=1722714490]
+stream = ExtResource("15_n6n4o")
 
 [node name="EnemyDead" type="AudioStreamPlayer2D" parent="SoundEffects" unique_id=61575065]
+stream = ExtResource("16_s6o11")
 
 [node name="DeathMenu" type="Control" parent="." unique_id=1597040886 node_paths=PackedStringArray("game", "pauseMenu", "player")]
 visible = false

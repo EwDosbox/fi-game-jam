@@ -2,9 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://d4hwciwdnl0xm" path="res://Assets/Packed/Level.tscn" id="1_l65xh"]
 [ext_resource type="PackedScene" uid="uid://bxk3itqy6vcuw" path="res://Assets/Packed/enemy_w.tscn" id="2_ac2xa"]
+[ext_resource type="PackedScene" uid="uid://jtsvnpcirm5f" path="res://Menus/Level_final.tscn" id="2_ndrj7"]
 [ext_resource type="PackedScene" uid="uid://dvm0q8m2ewvib" path="res://Assets/Packed/enemy_s.tscn" id="3_ac2xa"]
 
-[node name="Level" unique_id=964451484 instance=ExtResource("1_l65xh")]
+[node name="Level3" unique_id=964451484 instance=ExtResource("1_l65xh")]
+
+[node name="Game" parent="." index="0" unique_id=479275414]
+nextScene = ExtResource("2_ndrj7")
 
 [node name="Background" parent="." index="1" unique_id=1106616829]
 position = Vector2(32, -32)
@@ -15,22 +19,25 @@ tile_map_data = PackedByteArray("AAD+////AAACAAIAAAD/////AAACAAIAAAAAAP//AAACAAI
 [node name="EnemyManager" parent="." index="3" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
 enemies = [NodePath("Enemy"), NodePath("Enemy2")]
 
-[node name="Enemy" parent="EnemyManager" index="0" unique_id=292821970 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript") instance=ExtResource("2_ac2xa")]
+[node name="Enemy" parent="EnemyManager" index="0" unique_id=292821970 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript", "sound") instance=ExtResource("2_ac2xa")]
 position = Vector2(-224.00002, -224)
 startNode = NodePath("../../Markers/Start")
 loopNode = NodePath("../../Markers/Loop")
 gridScript = NodePath("../../Grid")
 gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
 
-[node name="Enemy2" parent="EnemyManager" index="1" unique_id=825719974 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript") instance=ExtResource("2_ac2xa")]
+[node name="Enemy2" parent="EnemyManager" index="1" unique_id=825719974 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript", "sound") instance=ExtResource("2_ac2xa")]
 position = Vector2(288, -32)
 startNode = NodePath("../../Markers/Start2")
 loopNode = NodePath("../../Markers/Loop2")
 gridScript = NodePath("../../Grid")
 gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
 
-[node name="Enemy3" parent="EnemyManager" index="2" unique_id=338094841 instance=ExtResource("3_ac2xa")]
+[node name="Enemy3" parent="EnemyManager" index="2" unique_id=338094841 node_paths=PackedStringArray("sound") instance=ExtResource("3_ac2xa")]
 position = Vector2(288, 96)
+sound = NodePath("../../SoundEffects")
 
 [node name="Player" parent="." index="4" unique_id=1088235652]
 position = Vector2(64, -224)

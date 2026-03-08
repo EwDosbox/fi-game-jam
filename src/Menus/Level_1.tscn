@@ -15,17 +15,21 @@ tile_map_data = PackedByteArray("AAD5//7/AAAIAAMAAAD5////AAAIAAMAAAD5/wAAAAAIAAM
 [node name="EnemyManager" parent="." index="3" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
 enemies = [NodePath("Enemy"), NodePath("Enemy2"), NodePath("Enemy3"), NodePath("Enemy4")]
 
-[node name="Enemy" parent="EnemyManager" index="0" unique_id=292821970 instance=ExtResource("3_shpnx")]
+[node name="Enemy" parent="EnemyManager" index="0" unique_id=292821970 node_paths=PackedStringArray("sound") instance=ExtResource("3_shpnx")]
 position = Vector2(160, -32)
+sound = NodePath("../../SoundEffects")
 
-[node name="Enemy2" parent="EnemyManager" index="1" unique_id=1300741245 instance=ExtResource("3_shpnx")]
+[node name="Enemy2" parent="EnemyManager" index="1" unique_id=1300741245 node_paths=PackedStringArray("sound") instance=ExtResource("3_shpnx")]
 position = Vector2(224, -32)
+sound = NodePath("../../SoundEffects")
 
-[node name="Enemy3" parent="EnemyManager" index="2" unique_id=54865472 instance=ExtResource("3_shpnx")]
+[node name="Enemy3" parent="EnemyManager" index="2" unique_id=54865472 node_paths=PackedStringArray("sound") instance=ExtResource("3_shpnx")]
 position = Vector2(288, -32)
+sound = NodePath("../../SoundEffects")
 
-[node name="Enemy4" parent="EnemyManager" index="3" unique_id=1199777974 instance=ExtResource("3_shpnx")]
+[node name="Enemy4" parent="EnemyManager" index="3" unique_id=1199777974 node_paths=PackedStringArray("sound") instance=ExtResource("3_shpnx")]
 position = Vector2(352, -32)
+sound = NodePath("../../SoundEffects")
 
 [node name="Player" parent="." index="4" unique_id=1088235652]
 position = Vector2(-320, -32)

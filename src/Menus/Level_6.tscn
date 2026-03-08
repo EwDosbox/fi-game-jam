@@ -16,21 +16,25 @@ tile_map_data = PackedByteArray("AAD8//n/AAAGAAMAAAD9//n/AAAGAAMAAAD+//n/AAAGAAM
 [node name="EnemyManager" parent="." index="3" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
 enemies = [NodePath("Enemy3"), NodePath("Enemy6"), NodePath("Enemy"), NodePath("Enemy2")]
 
-[node name="Enemy3" parent="EnemyManager" index="0" unique_id=2041763146 node_paths=PackedStringArray("gridScript") instance=ExtResource("2_rmhck")]
+[node name="Enemy3" parent="EnemyManager" index="0" unique_id=2041763146 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("2_rmhck")]
 position = Vector2(-96.00001, 32)
 gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
 
-[node name="Enemy6" parent="EnemyManager" index="1" unique_id=982956684 node_paths=PackedStringArray("gridScript") instance=ExtResource("2_rmhck")]
+[node name="Enemy6" parent="EnemyManager" index="1" unique_id=982956684 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("2_rmhck")]
 position = Vector2(224, 32)
 gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
 
-[node name="Enemy" parent="EnemyManager" index="2" unique_id=292821970 node_paths=PackedStringArray("gridScript") instance=ExtResource("2_rmhck")]
+[node name="Enemy" parent="EnemyManager" index="2" unique_id=292821970 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("2_rmhck")]
 position = Vector2(-224, -416)
 gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
 
-[node name="Enemy2" parent="EnemyManager" index="3" unique_id=1728613880 node_paths=PackedStringArray("gridScript") instance=ExtResource("2_rmhck")]
+[node name="Enemy2" parent="EnemyManager" index="3" unique_id=1728613880 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("2_rmhck")]
 position = Vector2(352, -416)
 gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
 
 [node name="Player" parent="." index="4" unique_id=1088235652]
 position = Vector2(64, 32)
