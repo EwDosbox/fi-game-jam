@@ -46,3 +46,19 @@ position = Vector2(384, -96)
 
 [node name="loop" type="Marker2D" parent="Markers" index="1" unique_id=1648080291]
 position = Vector2(384, 96)
+
+[node name="ColorRect" parent="DeathMenu" parent_id_path=PackedInt32Array(1597040886) index="0" unique_id=900272149]
+offset_top = -404.0
+offset_right = 684.0
+
+[node name="ButtonRestart" parent="DeathMenu" parent_id_path=PackedInt32Array(1597040886) index="1" unique_id=944853072]
+offset_left = -116.0
+offset_top = 44.0
+offset_right = 92.0
+offset_bottom = 112.0
+
+[node name="ButtonMainMenu" parent="DeathMenu" parent_id_path=PackedInt32Array(1597040886) index="2" unique_id=8735895]
+offset_left = -116.0
+offset_top = 108.0
+offset_right = 92.0
+offset_bottom = 176.0
