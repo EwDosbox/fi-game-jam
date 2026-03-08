@@ -2,20 +2,337 @@
 
 [ext_resource type="PackedScene" uid="uid://d4hwciwdnl0xm" path="res://Assets/Packed/Level.tscn" id="1_sengq"]
 [ext_resource type="PackedScene" uid="uid://dmdgs7k78kf5p" path="res://Menus/final text.tscn" id="2_8xoyb"]
-[ext_resource type="Script" uid="uid://d18tyrirgqcv1" path="res://Menus/CameraLevelFinal.cs" id="3_jn0iq"]
+[ext_resource type="PackedScene" uid="uid://dvm0q8m2ewvib" path="res://Assets/Packed/enemy_s.tscn" id="3_jmkh5"]
+[ext_resource type="Script" path="res://Menus/CameraLevelFinal.cs" id="3_jn0iq"]
+[ext_resource type="PackedScene" uid="uid://bxk3itqy6vcuw" path="res://Assets/Packed/enemy_w.tscn" id="4_f3f0g"]
 
 [node name="Level" unique_id=964451484 instance=ExtResource("1_sengq")]
 
 [node name="Game" parent="." index="0" unique_id=479275414]
 nextScene = ExtResource("2_8xoyb")
 
+[node name="Background" parent="." index="1" unique_id=1106616829]
+position = Vector2(385, -230.00006)
+scale = Vector2(73.299995, 44.58)
+
 [node name="Grid" parent="." index="2" unique_id=734412611]
-tile_map_data = PackedByteArray("AAD/////AAAIAAMAAAD//wAAAAAIAAMAAAAAAAAAAAAIAAMAAAAAAP//AAAIAAMAAAD+////AAAIAAMAAAD+/wAAAAAIAAMAAAABAAAAAAAIAAMAAAABAP//AAAIAAMAAAABAP7/AAAIAAMAAAAAAP7/AAAIAAMAAAD///7/AAAIAAMAAAD+//7/AAAIAAMAAAA=")
+tile_map_data = PackedByteArray("AAD/////AAAIAAMAAAD//wAAAAAIAAMAAAAAAAAAAAAIAAMAAAAAAP//AAAIAAMAAAD+////AAAIAAMAAAD+/wAAAAAIAAMAAAABAAAAAAAIAAMAAAABAP//AAAIAAMAAAABAP7/AAAIAAMAAAAAAP7/AAAIAAMAAAD///7/AAAIAAMAAAD+//7/AAAIAAMAAAACAP7/AAAIAAMAAAADAP7/AAAIAAMAAAAEAP7/AAAIAAMAAAAFAP7/AAAIAAMAAAAGAP7/AAAIAAMAAAAHAP7/AAAIAAMAAAAIAP7/AAAIAAMAAAAJAP7/AAAIAAMAAAAKAP7/AAAIAAMAAAALAP7/AAAIAAMAAAAMAP7/AAAIAAMAAAANAP7/AAAIAAMAAAAOAP7/AAAIAAMAAAAPAP7/AAAIAAMAAAAQAP7/AAAIAAMAAAARAP7/AAAIAAMAAAASAP7/AAAIAAMAAAATAP7/AAAIAAMAAAAUAP7/AAAIAAMAAAAVAP7/AAAIAAMAAAAWAP7/AAAIAAMAAAAXAP7/AAAIAAMAAAAYAP7/AAAIAAMAAAAZAP7/AAAIAAMAAAAaAP7/AAAIAAMAAAAbAP7/AAAIAAMAAAAbAP//AAAIAAMAAAAbAAAAAAAIAAMAAAAaAAAAAAAIAAMAAAAZAAAAAAAIAAMAAAAYAAAAAAAIAAMAAAAXAAAAAAAIAAMAAAAWAAAAAAAIAAMAAAAVAAAAAAAIAAMAAAAUAAAAAAAIAAMAAAATAAAAAAAIAAMAAAASAAAAAAAIAAMAAAARAAAAAAAIAAMAAAAQAAAAAAAIAAMAAAAPAAAAAAAIAAMAAAAOAAAAAAAIAAMAAAANAAAAAAAIAAMAAAAMAAAAAAAIAAMAAAALAAAAAAAIAAMAAAAKAAAAAAAIAAMAAAAJAAAAAAAIAAMAAAAIAAAAAAAIAAMAAAAHAAAAAAAIAAMAAAAGAAAAAAAIAAMAAAAFAAAAAAAIAAMAAAAEAAAAAAAIAAMAAAADAAAAAAAIAAMAAAACAAAAAAAIAAMAAAACAP//AAAIAAMAAAADAP//AAAIAAMAAAAEAP//AAAIAAMAAAAFAP//AAAIAAMAAAAGAP//AAAIAAMAAAAHAP//AAAIAAMAAAAIAP//AAAIAAMAAAAJAP//AAAIAAMAAAAKAP//AAAIAAMAAAALAP//AAAIAAMAAAAMAP//AAAIAAMAAAANAP//AAAIAAMAAAAOAP//AAAIAAMAAAAPAP//AAAIAAMAAAAQAP//AAAIAAMAAAARAP//AAAIAAMAAAASAP//AAAIAAMAAAATAP//AAAIAAMAAAAUAP//AAAIAAMAAAAVAP//AAAIAAMAAAAWAP//AAAIAAMAAAAXAP//AAAIAAMAAAAYAP//AAAIAAMAAAAZAP//AAAIAAMAAAAaAP//AAAIAAMAAAAYAAEAAAAIAAMAAAAYAAIAAAAIAAMAAAAYAAMAAAAIAAMAAAAYAAQAAAAIAAMAAAAZAAQAAAAIAAMAAAAaAAQAAAAIAAMAAAAaAAMAAAAIAAMAAAAbAAMAAAAIAAMAAAAbAAIAAAAIAAMAAAAbAAEAAAAIAAMAAAAaAAEAAAAIAAMAAAAZAAEAAAAIAAMAAAAZAAIAAAAIAAMAAAAZAAMAAAAIAAMAAAAaAAIAAAAIAAMAAAAbAAQAAAAIAAMAAAAbAAUAAAAIAAMAAAAaAAUAAAAIAAMAAAAZAAUAAAAIAAMAAAAYAAUAAAAIAAMAAAAbAAYAAAAIAAMAAAAaAAYAAAAIAAMAAAAZAAYAAAAIAAMAAAAYAAYAAAAIAAMAAAD9/wYAAAAIAAMAAAD+/wYAAAAIAAMAAAD//wYAAAAIAAMAAAAFAAYAAAAIAAMAAAAGAAYAAAAIAAMAAAAHAAYAAAAIAAMAAAAIAAYAAAAIAAMAAAAJAAYAAAAIAAMAAAAKAAYAAAAIAAMAAAALAAYAAAAIAAMAAAAMAAYAAAAIAAMAAAANAAYAAAAIAAMAAAAOAAYAAAAIAAMAAAAPAAYAAAAIAAMAAAAQAAYAAAAIAAMAAAARAAYAAAAIAAMAAAASAAYAAAAIAAMAAAATAAYAAAAIAAMAAAAUAAYAAAAIAAMAAAAVAAYAAAAIAAMAAAAWAAYAAAAIAAMAAAAXAAYAAAAIAAMAAAAAAAYAAAAIAAMAAAABAAYAAAAIAAMAAAACAAYAAAAIAAMAAAADAAYAAAAIAAMAAAAEAAYAAAAIAAMAAAD8/wYAAAAIAAMAAAD7/wYAAAAIAAMAAAD6/wYAAAAIAAMAAAD5/wYAAAAIAAMAAAD4/wYAAAAIAAMAAAD3/wYAAAAIAAMAAAD1/wYAAAAIAAMAAAD2/wYAAAAIAAMAAAD0/wYAAAAIAAMAAADz/wYAAAAIAAMAAADy/wYAAAAIAAMAAADw/wYAAAAIAAMAAADx/wYAAAAIAAMAAADm/wYAAAAIAAMAAADn/wYAAAAIAAMAAADo/wYAAAAIAAMAAADp/wYAAAAIAAMAAADq/wYAAAAIAAMAAADr/wYAAAAIAAMAAADs/wYAAAAIAAMAAADt/wYAAAAIAAMAAADu/wYAAAAIAAMAAADv/wYAAAAIAAMAAAA=")
+
+[node name="EnemyManager" parent="." index="3" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
+enemies = [NodePath("Enemy"), NodePath("Enemy2"), NodePath("Enemy3"), NodePath("Enemy4"), NodePath("Enemy5"), NodePath("Enemy6"), NodePath("Enemy7"), NodePath("Enemy8"), NodePath("Enemy9"), NodePath("Enemy10"), NodePath("Enemy11"), NodePath("Enemy12"), NodePath("Enemy13"), NodePath("Enemy14"), NodePath("Enemy15"), NodePath("Enemy16"), NodePath("Enemy17"), NodePath("Enemy18"), NodePath("Enemy19"), NodePath("Enemy20"), NodePath("enemywalk"), NodePath("enemywalk2"), NodePath("enemywalk3"), NodePath("enemywalk4"), NodePath("enemywalk5"), NodePath("enemywalk6"), NodePath("enemywalk7"), NodePath("enemywalk8"), NodePath("enemywalk9"), NodePath("enemywalk10"), NodePath("enemywalk11"), NodePath("enemywalk12"), NodePath("enemywalk13"), NodePath("enemywalk14"), NodePath("enemywalk15"), NodePath("Enemy21")]
+
+[node name="Enemy" parent="EnemyManager" index="0" unique_id=292821970 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(480, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy2" parent="EnemyManager" index="1" unique_id=113317050 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(544, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy3" parent="EnemyManager" index="2" unique_id=172685576 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(608, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy4" parent="EnemyManager" index="3" unique_id=938388435 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(672, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy5" parent="EnemyManager" index="4" unique_id=2142547491 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(736, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy6" parent="EnemyManager" index="5" unique_id=1299220220 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(800, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy7" parent="EnemyManager" index="6" unique_id=1631162865 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(864, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy8" parent="EnemyManager" index="7" unique_id=2005111739 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(928, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy9" parent="EnemyManager" index="8" unique_id=564238863 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(992, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy10" parent="EnemyManager" index="9" unique_id=1127831393 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(1056, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy11" parent="EnemyManager" index="10" unique_id=1917023113 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(1120, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy12" parent="EnemyManager" index="11" unique_id=1934386069 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(1184, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy13" parent="EnemyManager" index="12" unique_id=907370173 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(1248, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy14" parent="EnemyManager" index="13" unique_id=533845299 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(1312, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy15" parent="EnemyManager" index="14" unique_id=548038343 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(1376, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy16" parent="EnemyManager" index="15" unique_id=1258688261 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(1440, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy17" parent="EnemyManager" index="16" unique_id=607858506 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(1504, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy18" parent="EnemyManager" index="17" unique_id=1986821661 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(1568, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy19" parent="EnemyManager" index="18" unique_id=1529463307 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(1632, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy20" parent="EnemyManager" index="19" unique_id=1723434833 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(1696, -32)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Enemy21" parent="EnemyManager" index="20" unique_id=1168996701 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("3_jmkh5")]
+position = Vector2(-1632.0001, 416)
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="enemywalk" parent="EnemyManager" index="21" unique_id=1339084973 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript", "sound") instance=ExtResource("4_f3f0g")]
+position = Vector2(1696, 416)
+startNode = NodePath("../../Markers/start")
+loopNode = NodePath("../../Markers/loop")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="enemywalk2" parent="EnemyManager" index="22" unique_id=1294976595 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript", "sound") instance=ExtResource("4_f3f0g")]
+position = Vector2(1568, 416)
+startNode = NodePath("../../Markers/start2")
+loopNode = NodePath("../../Markers/loop2")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="enemywalk3" parent="EnemyManager" index="23" unique_id=722635019 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript", "sound") instance=ExtResource("4_f3f0g")]
+position = Vector2(1440.0001, 416)
+startNode = NodePath("../../Markers/start3")
+loopNode = NodePath("../../Markers/loop3")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="enemywalk4" parent="EnemyManager" index="24" unique_id=2079388065 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript", "sound") instance=ExtResource("4_f3f0g")]
+position = Vector2(1312.0001, 416)
+startNode = NodePath("../../Markers/start4")
+loopNode = NodePath("../../Markers/loop4")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="enemywalk5" parent="EnemyManager" index="25" unique_id=1345531843 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript", "sound") instance=ExtResource("4_f3f0g")]
+position = Vector2(800, 416)
+startNode = NodePath("../../Markers/start5")
+loopNode = NodePath("../../Markers/loop5")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="enemywalk6" parent="EnemyManager" index="26" unique_id=36775381 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript", "sound") instance=ExtResource("4_f3f0g")]
+position = Vector2(1184, 416)
+startNode = NodePath("../../Markers/start6")
+loopNode = NodePath("../../Markers/loop6")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="enemywalk7" parent="EnemyManager" index="27" unique_id=1207994569 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript", "sound") instance=ExtResource("4_f3f0g")]
+position = Vector2(672.0001, 416)
+startNode = NodePath("../../Markers/start7")
+loopNode = NodePath("../../Markers/loop7")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="enemywalk8" parent="EnemyManager" index="28" unique_id=1393212871 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript", "sound") instance=ExtResource("4_f3f0g")]
+position = Vector2(1056.0001, 416)
+startNode = NodePath("../../Markers/start8")
+loopNode = NodePath("../../Markers/loop8")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="enemywalk9" parent="EnemyManager" index="29" unique_id=1253464957 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript", "sound") instance=ExtResource("4_f3f0g")]
+position = Vector2(544.00006, 416)
+startNode = NodePath("../../Markers/start9")
+loopNode = NodePath("../../Markers/loop9")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="enemywalk10" parent="EnemyManager" index="30" unique_id=438125065 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript", "sound") instance=ExtResource("4_f3f0g")]
+position = Vector2(928.00006, 416)
+startNode = NodePath("../../Markers/start10")
+loopNode = NodePath("../../Markers/loop10")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="enemywalk11" parent="EnemyManager" index="31" unique_id=1148953497 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript", "sound") instance=ExtResource("4_f3f0g")]
+position = Vector2(416.00006, 416)
+startNode = NodePath("../../Markers/start10")
+loopNode = NodePath("../../Markers/loop10")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="enemywalk12" parent="EnemyManager" index="32" unique_id=139927609 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript", "sound") instance=ExtResource("4_f3f0g")]
+position = Vector2(288.00003, 416)
+startNode = NodePath("../../Markers/start10")
+loopNode = NodePath("../../Markers/loop10")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="enemywalk13" parent="EnemyManager" index="33" unique_id=1566308704 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript", "sound") instance=ExtResource("4_f3f0g")]
+position = Vector2(160, 416)
+startNode = NodePath("../../Markers/start10")
+loopNode = NodePath("../../Markers/loop10")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="enemywalk14" parent="EnemyManager" index="34" unique_id=256192070 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript", "sound") instance=ExtResource("4_f3f0g")]
+position = Vector2(32, 416)
+startNode = NodePath("../../Markers/start10")
+loopNode = NodePath("../../Markers/loop10")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="enemywalk15" parent="EnemyManager" index="35" unique_id=742426107 node_paths=PackedStringArray("startNode", "loopNode", "gridScript", "gridScript", "sound") instance=ExtResource("4_f3f0g")]
+position = Vector2(-96, 416)
+startNode = NodePath("../../Markers/start10")
+loopNode = NodePath("../../Markers/loop10")
+gridScript = NodePath("../../Grid")
+gridScript = NodePath("../../Grid")
+sound = NodePath("../../SoundEffects")
+
+[node name="Player" parent="." index="4" unique_id=1088235652]
+position = Vector2(0, -32)
+
+[node name="Boundary" parent="." index="5" unique_id=1288459111]
+tile_map_data = PackedByteArray("AAD+/wEAAAACAAMAAAD//wEAAAACAAMAAAAAAAEAAAACAAMAAAABAAEAAAACAAMAAAACAAEAAAACAAMAAAADAAEAAAACAAMAAAAEAAEAAAACAAMAAAAFAAEAAAACAAMAAAAGAAEAAAACAAMAAAAHAAEAAAACAAMAAAAIAAEAAAACAAMAAAAJAAEAAAACAAMAAAAKAAEAAAACAAMAAAALAAEAAAACAAMAAAAMAAEAAAACAAMAAAANAAEAAAACAAMAAAAOAAEAAAACAAMAAAAPAAEAAAACAAMAAAAQAAEAAAACAAMAAAARAAEAAAACAAMAAAASAAEAAAACAAMAAAATAAEAAAACAAMAAAAUAAEAAAACAAMAAAAVAAEAAAACAAMAAAAWAAEAAAACAAMAAAAbAAcAAAACAAMAAAAaAAcAAAACAAMAAAAZAAcAAAACAAMAAAAYAAcAAAACAAMAAAAXAAcAAAACAAMAAAAWAAcAAAACAAMAAAAVAAcAAAACAAMAAAAUAAcAAAACAAMAAAATAAcAAAACAAMAAAASAAcAAAACAAMAAAARAAcAAAACAAMAAAAQAAcAAAACAAMAAAAPAAcAAAACAAMAAAAOAAcAAAACAAMAAAANAAcAAAACAAMAAAAMAAcAAAACAAMAAAALAAcAAAACAAMAAAAKAAcAAAACAAMAAAAJAAcAAAACAAMAAAAIAAcAAAACAAMAAAAHAAcAAAACAAMAAAAGAAcAAAACAAMAAAAFAAcAAAACAAMAAAAEAAcAAAACAAMAAAADAAcAAAACAAMAAAACAAcAAAACAAMAAAABAAcAAAACAAMAAAAAAAcAAAACAAMAAAD//wcAAAACAAMAAAD+/wcAAAACAAMAAAD9/wcAAAACAAMAAAD8/wcAAAACAAMAAAD7/wcAAAACAAMAAAD6/wcAAAACAAMAAAD5/wcAAAACAAMAAAD4/wcAAAACAAMAAAD3/wcAAAACAAMAAAD2/wcAAAACAAMAAAD1/wcAAAACAAMAAAD0/wcAAAACAAMAAADz/wcAAAACAAMAAADy/wcAAAACAAMAAADx/wcAAAACAAMAAADw/wcAAAACAAMAAADv/wcAAAACAAMAAADu/wcAAAACAAMAAADt/wcAAAACAAMAAADs/wcAAAACAAMAAADr/wcAAAACAAMAAADq/wcAAAACAAMAAADp/wcAAAACAAMAAADo/wcAAAACAAMAAADn/wcAAAACAAMAAADm/wcAAAACAAMAAADl/wYAAAACAAMAAFDm/wUAAAACAAMAADDn/wUAAAACAAMAADDo/wUAAAACAAMAADDp/wUAAAACAAMAADDq/wUAAAACAAMAADDr/wUAAAACAAMAADDs/wUAAAACAAMAADDt/wUAAAACAAMAADDu/wUAAAACAAMAADDv/wUAAAACAAMAADDw/wUAAAACAAMAADDx/wUAAAACAAMAADDy/wUAAAACAAMAADDz/wUAAAACAAMAADD0/wUAAAACAAMAADD1/wUAAAACAAMAADD2/wUAAAACAAMAADD3/wUAAAACAAMAADD4/wUAAAACAAMAADD5/wUAAAACAAMAADD6/wUAAAACAAMAADD7/wUAAAACAAMAADD8/wUAAAACAAMAADD9/wUAAAACAAMAADD+/wUAAAACAAMAADD//wUAAAACAAMAADAAAAUAAAACAAMAADABAAUAAAACAAMAADACAAUAAAACAAMAADADAAUAAAACAAMAADAEAAUAAAACAAMAADAFAAUAAAACAAMAADAGAAUAAAACAAMAADAHAAUAAAACAAMAADAIAAUAAAACAAMAADAJAAUAAAACAAMAADAKAAUAAAACAAMAADALAAUAAAACAAMAADAMAAUAAAACAAMAADANAAUAAAACAAMAADAOAAUAAAACAAMAADAPAAUAAAACAAMAADAQAAUAAAACAAMAADARAAUAAAACAAMAADASAAUAAAACAAMAADATAAUAAAACAAMAADAUAAUAAAACAAMAADAVAAUAAAACAAMAADAWAAUAAAACAAMAADAcAAYAAAACAAMAAGAcAAUAAAACAAMAAGAcAAQAAAACAAMAAGAcAAMAAAACAAMAAGAcAAIAAAACAAMAAGAcAAEAAAACAAMAAGAcAAAAAAACAAMAAGAcAP//AAACAAMAAGAcAP7/AAACAAMAAGAbAP3/AAACAAMAADAaAP3/AAACAAMAADAZAP3/AAACAAMAADAYAP3/AAACAAMAADAXAP3/AAACAAMAADAWAP3/AAACAAMAADAVAP3/AAACAAMAADAUAP3/AAACAAMAADATAP3/AAACAAMAADASAP3/AAACAAMAADARAP3/AAACAAMAADAQAP3/AAACAAMAADAPAP3/AAACAAMAADAOAP3/AAACAAMAADANAP3/AAACAAMAADAMAP3/AAACAAMAADALAP3/AAACAAMAADAKAP3/AAACAAMAADAJAP3/AAACAAMAADAIAP3/AAACAAMAADAHAP3/AAACAAMAADAGAP3/AAACAAMAADAFAP3/AAACAAMAADAEAP3/AAACAAMAADADAP3/AAACAAMAADACAP3/AAACAAMAADABAP3/AAACAAMAADAAAP3/AAACAAMAADD///3/AAACAAMAADD+//3/AAACAAMAADD9//7/AAACAAMAAFD9////AAACAAMAAFD9/wAAAAACAAMAAFAXAAIAAAACAAMAAFAXAAMAAAACAAMAAFAXAAQAAAACAAMAAFAXAAUAAAAEAAEAAAAXAAEAAAAFAAMAAAAcAP3/AAADAAAAAAAcAAcAAAADAAAAAFDl/wcAAAADAAAAADD9/wEAAAADAAAAADDl/wUAAAADAAAAAGD9//3/AAADAAAAAGA=")
 
 [node name="Camera2D" parent="." index="7" unique_id=655309865]
 limit_enabled = false
 position_smoothing_enabled = true
 script = ExtResource("3_jn0iq")
 
-[node name="Markers" parent="." index="8" unique_id=267341264]
-position = Vector2(14, -360)
+[node name="start" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="0" unique_id=136371367]
+position = Vector2(1760, 416.00003)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="loop" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="1" unique_id=456019919]
+position = Vector2(-1376, 416.00006)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="start2" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="2" unique_id=315514995]
+position = Vector2(1760, 416.00003)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="loop2" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="3" unique_id=819206231]
+position = Vector2(-1376, 416.00006)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="start3" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="4" unique_id=1743391119]
+position = Vector2(1760, 416.00003)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="loop3" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="5" unique_id=947674727]
+position = Vector2(-1376, 416.00006)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="start4" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="6" unique_id=1850020360]
+position = Vector2(1760, 416.00003)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="loop4" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="7" unique_id=222332890]
+position = Vector2(-1376, 416.00006)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="start5" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="8" unique_id=1171941148]
+position = Vector2(1760, 416.00003)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="loop5" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="9" unique_id=331830200]
+position = Vector2(-1376, 416.00006)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="start6" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="10" unique_id=1618334914]
+position = Vector2(1760, 416.00003)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="loop6" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="11" unique_id=57011463]
+position = Vector2(-1376, 416.00006)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="start7" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="12" unique_id=732091487]
+position = Vector2(1760, 416.00003)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="loop7" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="13" unique_id=2004065991]
+position = Vector2(-1376, 416.00006)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="start8" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="14" unique_id=143570370]
+position = Vector2(1760, 416.00003)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="loop8" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="15" unique_id=1192278960]
+position = Vector2(-1376, 416.00006)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="start9" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="16" unique_id=869541487]
+position = Vector2(1760, 416.00003)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="loop9" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="17" unique_id=214389830]
+position = Vector2(-1376, 416.00006)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="start10" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="18" unique_id=1404574163]
+position = Vector2(1760, 416.00003)
+scale = Vector2(-1.3223828, -2.8512638)
+
+[node name="loop10" type="Marker2D" parent="Markers" parent_id_path=PackedInt32Array(267341264) index="19" unique_id=338406677]
+position = Vector2(-1376, 416.00006)
+scale = Vector2(-1.3223828, -2.8512638)

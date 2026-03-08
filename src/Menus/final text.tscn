@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://nruua05d0mhu" path="res://Scripts/MainMenu.cs" id="1_ly0ai"]
 [ext_resource type="PackedScene" uid="uid://cvph23p6b5tdm" path="res://Menus/MainMenu.tscn" id="2_aytxx"]
 [ext_resource type="Texture2D" uid="uid://bm5dyc600l4u" path="res://Assets/Images/purple background.png" id="2_lsl73"]
+[ext_resource type="Texture2D" uid="uid://6wbllxe3ix2u" path="res://Assets/Images/end-button.png" id="4_aytxx"]
 
 [node name="MainMenu" type="Control" unique_id=526585807]
 layout_mode = 3
@@ -41,10 +42,11 @@ visible_characters_behavior = 1
 
 [node name="Button" type="Button" parent="." unique_id=1547414043]
 layout_mode = 0
-offset_left = -128.0
-offset_top = 128.0
-offset_right = 160.0
-offset_bottom = 159.0
-text = "Finish"
+offset_left = -87.0
+offset_top = 96.0
+offset_right = 201.0
+offset_bottom = 164.0
+icon = ExtResource("4_aytxx")
+flat = true
 
 [connection signal="pressed" from="Button" to="." method="NextScene"]
