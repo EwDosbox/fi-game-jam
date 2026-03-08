@@ -19,6 +19,8 @@ public partial class Player : CharacterBody2D
 	private AnimatedSprite2D sprite;
 	[Export]
 	private Grid gridScript;
+	[Export]
+	private SoundEffects sound;
 	#endregion
 
 	public async Task SmoothMove(Vector2 direction)
@@ -38,6 +40,7 @@ public partial class Player : CharacterBody2D
 		targetPosition = targetPosition.Snapped(gridScript.GridVector);
 
 		sprite.Play("move");
+		sound.PlayPlayerMove();
 
 		await TweenPhysicsMove(targetPosition);
 
@@ -78,6 +81,7 @@ public partial class Player : CharacterBody2D
 					else
 					{
 						this.isDead = true;
+						sound.PlayPlayerDead();
 						GD.Print("He dead");
 					}
 				}

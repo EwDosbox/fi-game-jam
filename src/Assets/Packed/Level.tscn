@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dyq6gmhwc0rma" path="res://Assets/Images/main-menu-button.png" id="9_glpoc"]
 [ext_resource type="Texture2D" uid="uid://ckkpoe47wtigt" path="res://Assets/Images/tittle-card.png" id="9_i2vdq"]
 [ext_resource type="Texture2D" uid="uid://bm5dyc600l4u" path="res://Assets/Images/purple background.png" id="12_7bnyv"]
+[ext_resource type="Script" uid="uid://dp1r3ftrkr3tw" path="res://Assets/Packed/SoundEffects.cs" id="13_8rqxw"]
 [ext_resource type="Script" uid="uid://dv13xmndpxl6m" path="res://Assets/Packed/DeathMenu.cs" id="13_jm442"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_62dxq"]
@@ -257,10 +258,11 @@ GridSize = 64
 script = ExtResource("5_mctwc")
 enemies = []
 
-[node name="Player" parent="." unique_id=1088235652 node_paths=PackedStringArray("gridScript") instance=ExtResource("4_igmha")]
+[node name="Player" parent="." unique_id=1088235652 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("4_igmha")]
 position = Vector2(0, -25)
 collision_layer = 80
 gridScript = NodePath("../Grid")
+sound = NodePath("../SoundEffects")
 
 [node name="Boundary" type="TileMapLayer" parent="." unique_id=1288459111]
 tile_set = SubResource("TileSet_c3tdy")
@@ -352,6 +354,15 @@ offset = Vector2(50, 0)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=655309865]
 
 [node name="Markers" type="Node2D" parent="." unique_id=267341264]
+
+[node name="SoundEffects" type="Node2D" parent="." unique_id=1635830495]
+script = ExtResource("13_8rqxw")
+
+[node name="PlayerMove" type="AudioStreamPlayer2D" parent="SoundEffects" unique_id=1794229907]
+
+[node name="PlayerDead" type="AudioStreamPlayer2D" parent="SoundEffects" unique_id=1722714490]
+
+[node name="EnemyDead" type="AudioStreamPlayer2D" parent="SoundEffects" unique_id=61575065]
 
 [node name="DeathMenu" type="Control" parent="." unique_id=1597040886 node_paths=PackedStringArray("game", "pauseMenu", "player")]
 visible = false

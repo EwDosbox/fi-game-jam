@@ -20,12 +20,15 @@ public partial class Enemy : CharacterBody2D
 	private Grid gridScript;
 	[Export]
 	private CollisionShape2D collision;
+	[Export]
+	private SoundEffects sound;
 	#endregion
 
 	public virtual void Kill()
 	{
 		isDead = true;
 		collision.Disabled = true;
+		sound.PlayEnemyDead();
 		sprite.Play("dead");
 	}
 
