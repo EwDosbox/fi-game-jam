@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dmdgs7k78kf5p"]
 
 [ext_resource type="Script" uid="uid://nruua05d0mhu" path="res://Scripts/MainMenu.cs" id="1_ly0ai"]
-[ext_resource type="PackedScene" uid="uid://cvph23p6b5tdm" path="res://Menus/MainMenu.tscn" id="2_aytxx"]
+[ext_resource type="PackedScene" uid="uid://bxk3itqy6vcuw" path="res://Assets/Packed/enemy_w.tscn" id="2_aytxx"]
 [ext_resource type="Texture2D" uid="uid://bm5dyc600l4u" path="res://Assets/Images/purple background.png" id="2_lsl73"]
 [ext_resource type="Texture2D" uid="uid://6wbllxe3ix2u" path="res://Assets/Images/end-button.png" id="4_aytxx"]
 
@@ -49,4 +49,4 @@ offset_bottom = 164.0
 icon = ExtResource("4_aytxx")
 flat = true
 
-[connection signal="pressed" from="Button" to="." method="NextScene"]
+[connection signal="pressed" from="Button" to="." method="ExitGame"]

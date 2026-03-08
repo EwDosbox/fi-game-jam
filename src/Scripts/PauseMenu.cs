@@ -9,8 +9,6 @@ public partial class PauseMenu : Control
 	#endregion
 	#region References
 	[Export]
-	private PackedScene MainMenuScene;
-	[Export]
 	private Game game;
 	[Export]
 	private Player player;
@@ -36,8 +34,6 @@ public partial class PauseMenu : Control
 
 	public void MainMenu()
 	{
-		if (MainMenuScene != null)
-			GetTree().ChangeSceneToPacked(MainMenuScene);
-
+		GetTree().ChangeSceneToFile("res://Menus/MainMenu.tscn");
 	}
 }
