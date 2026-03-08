@@ -19,8 +19,6 @@ public partial class Game : Node2D
 	private EnemyManager enemyManager;
 	[Export]
 	private PackedScene nextScene;
-	[Export]
-	private PackedScene thisScene;
 	#endregion
 
 	public override void _Ready()
@@ -76,8 +74,7 @@ public partial class Game : Node2D
 
 	public void ReloadScene()
 	{
-		if (thisScene != null)
-			GetTree().ChangeSceneToPacked(thisScene);
+		GetTree().ReloadCurrentScene();
 	}
 	public void ToggleControl()
 	{
