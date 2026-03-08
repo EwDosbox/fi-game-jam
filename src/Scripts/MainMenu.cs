@@ -10,17 +10,18 @@ public partial class MainMenu : Control
 	#region Public Variables
 	#endregion
 	#region References
+	[Export]
+	private PackedScene nextScene;
 	#endregion
-	public override void _Ready()
-	{
-	}
-
-	public override void _Process(double delta)
-	{
-	}
 
 	public void NextScene()
 	{
-		GetTree().ChangeSceneToFile("res://Menus/Level_1.tscn");
+		if (nextScene != null)
+			GetTree().ChangeSceneToPacked(nextScene);
+	}
+
+	public void ExitGame()
+	{
+		GetTree().Quit();
 	}
 }
