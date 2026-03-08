@@ -6,6 +6,7 @@ public partial class Game : Node2D
 	#region Private Vars
 	private int turnCounter = 0;
 	private bool isTurnRunning = false;
+	private bool canPlayerMove = true;
 	#endregion
 	#region Public Vars
 
@@ -18,6 +19,8 @@ public partial class Game : Node2D
 	private EnemyManager enemyManager;
 	[Export]
 	private PackedScene nextScene;
+	[Export]
+	private PackedScene thisScene;
 	#endregion
 
 	public override void _Ready()
@@ -26,7 +29,7 @@ public partial class Game : Node2D
 
 	public override void _Process(double delta)
 	{
-		if (isTurnRunning)
+		if (isTurnRunning || !canPlayerMove || PlayerScript.IsDead)
 			return;
 
 		Vector2 dir = Vector2.Zero;
@@ -69,5 +72,15 @@ public partial class Game : Node2D
 	{
 		if (nextScene != null)
 			GetTree().ChangeSceneToPacked(nextScene);
+	}
+
+	public void ReloadScene()
+	{
+		if (thisScene != null)
+			GetTree().ChangeSceneToPacked(thisScene);
+	}
+	public void ToggleControl()
+	{
+		canPlayerMove = !canPlayerMove;
 	}
 }

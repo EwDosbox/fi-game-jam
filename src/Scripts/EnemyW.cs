@@ -24,7 +24,7 @@ public partial class EnemyW : Enemy
 
 	public override async Task SmoothMove()
 	{
-		if (isMoving)
+		if (isMoving || base.isDead)
 			return;
 		if (hitWall)
 		{

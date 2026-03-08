@@ -7,10 +7,12 @@
 [ext_resource type="Script" uid="uid://cxx03iwba30vp" path="res://Scripts/EnemyManager.cs" id="5_mctwc"]
 [ext_resource type="Texture2D" uid="uid://o41q14npfmd2" path="res://Assets/Images/CosmicLilac_Tiles.png" id="6_t7f6x"]
 [ext_resource type="Script" uid="uid://p7aa5pwvvyf1" path="res://Scripts/PauseMenu.cs" id="8_8keqt"]
+[ext_resource type="PackedScene" uid="uid://cvph23p6b5tdm" path="res://Menus/MainMenu.tscn" id="9_7bnyv"]
 [ext_resource type="Texture2D" uid="uid://dggy8ty5536qi" path="res://Assets/Images/continue-button.png" id="9_8keqt"]
 [ext_resource type="Texture2D" uid="uid://dyq6gmhwc0rma" path="res://Assets/Images/main-menu-button.png" id="9_glpoc"]
 [ext_resource type="Texture2D" uid="uid://ckkpoe47wtigt" path="res://Assets/Images/tittle-card.png" id="9_i2vdq"]
 [ext_resource type="Texture2D" uid="uid://bm5dyc600l4u" path="res://Assets/Images/purple background.png" id="12_7bnyv"]
+[ext_resource type="Script" uid="uid://dv13xmndpxl6m" path="res://Assets/Packed/DeathMenu.cs" id="13_jm442"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_62dxq"]
 texture = ExtResource("6_t7f6x")
@@ -242,7 +244,7 @@ PlayerScript = NodePath("../Player")
 enemyManager = NodePath("../EnemyManager")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1106616829]
-position = Vector2(20, -32.999992)
+position = Vector2(-192, -160)
 scale = Vector2(29.41, 18.58)
 texture = ExtResource("12_7bnyv")
 
@@ -263,7 +265,7 @@ gridScript = NodePath("../Grid")
 [node name="Boundary" type="TileMapLayer" parent="." unique_id=1288459111]
 tile_set = SubResource("TileSet_c3tdy")
 
-[node name="PauseMenu" type="Control" parent="." unique_id=1264981098]
+[node name="PauseMenu" type="Control" parent="." unique_id=1264981098 node_paths=PackedStringArray("game", "player")]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -276,6 +278,9 @@ offset_bottom = -320.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("8_8keqt")
+MainMenuScene = ExtResource("9_7bnyv")
+game = NodePath("../Game")
+player = NodePath("../Player")
 
 [node name="ColorRect" type="ColorRect" parent="PauseMenu" unique_id=1539306798]
 layout_mode = 1
@@ -348,5 +353,33 @@ offset = Vector2(50, 0)
 
 [node name="Markers" type="Node2D" parent="." unique_id=267341264]
 
+[node name="DeathMenu" type="Control" parent="." unique_id=1597040886 node_paths=PackedStringArray("game", "pauseMenu", "player")]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("13_jm442")
+game = NodePath("../Game")
+pauseMenu = NodePath("../PauseMenu")
+player = NodePath("../Player")
+
+[node name="ColorRect" type="ColorRect" parent="DeathMenu" unique_id=900272149]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonRestart" type="Button" parent="DeathMenu" unique_id=944853072]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="ButtonMainMenu" type="Button" parent="DeathMenu" unique_id=8735895]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
 [connection signal="pressed" from="PauseMenu/ButtonContinue" to="PauseMenu" method="ToggleSetting"]
 [connection signal="pressed" from="PauseMenu/ButtonMainMenu" to="PauseMenu" method="MainMenu"]
+[connection signal="pressed" from="DeathMenu/ButtonRestart" to="DeathMenu" method="RestartLevel"]
+[connection signal="pressed" from="DeathMenu/ButtonMainMenu" to="DeathMenu" method="MainMenu"]

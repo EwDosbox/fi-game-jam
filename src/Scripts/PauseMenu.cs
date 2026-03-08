@@ -10,6 +10,10 @@ public partial class PauseMenu : Control
 	#region References
 	[Export]
 	private PackedScene MainMenuScene;
+	[Export]
+	private Game game;
+	[Export]
+	private Player player;
 	#endregion
 
 	public override void _Ready()
@@ -18,9 +22,10 @@ public partial class PauseMenu : Control
 
 	public override void _Process(double delta)
 	{
-		if (Input.IsActionJustPressed("pause"))
+		if (Input.IsActionJustPressed("pause") && !player.IsDead)
 		{
 			ToggleSetting();
+			game.ToggleControl();
 		}
 	}
 

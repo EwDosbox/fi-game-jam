@@ -9,8 +9,10 @@ public partial class Player : CharacterBody2D
 	private int bedPower = 1;
 	private Vector2 lastDirection = Vector2.Zero;
 	private bool isMoving = false;
+	private bool isDead = false;
 	#endregion
 	#region Public Variables
+	public bool IsDead { get { return isDead; } set { isDead = value; } }
 	#endregion
 	#region References
 	[Export]
@@ -73,9 +75,11 @@ public partial class Player : CharacterBody2D
 						enemy.Kill();
 						continue;
 					}
-
 					else
-						GD.Print("DeAD");
+					{
+						this.isDead = true;
+						GD.Print("He dead");
+					}
 				}
 
 				bedPower = 1;
