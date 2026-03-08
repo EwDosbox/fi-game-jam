@@ -9,7 +9,7 @@
 [node name="Game" parent="." index="0" unique_id=479275414]
 nextScene = ExtResource("2_15v43")
 
-[node name="Sprite2D" parent="." index="1" unique_id=1106616829]
+[node name="Background" parent="." index="1" unique_id=1106616829]
 position = Vector2(64, -32)
 
 [node name="Grid" parent="." index="2" unique_id=734412611]
