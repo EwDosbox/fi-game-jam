@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cvph23p6b5tdm"]
 
 [ext_resource type="Script" uid="uid://nruua05d0mhu" path="res://Scripts/MainMenu.cs" id="1_3g7qx"]
-[ext_resource type="PackedScene" uid="uid://b8fvul84qme6s" path="res://Menus/intro text.tscn" id="2_0xbyl"]
 [ext_resource type="Texture2D" uid="uid://bm5dyc600l4u" path="res://Assets/Images/purple background.png" id="2_r8dbq"]
 [ext_resource type="Texture2D" uid="uid://byde8jiqte22l" path="res://Assets/Images/play-button.png" id="3_5ncg0"]
 [ext_resource type="Texture2D" uid="uid://ckkpoe47wtigt" path="res://Assets/Images/tittle-card.png" id="3_7ihqj"]
@@ -15,7 +14,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3g7qx")
-nextScene = ExtResource("2_0xbyl")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1561560003]
 
@@ -24,7 +22,7 @@ position = Vector2(-2.5000591, 4.000017)
 scale = Vector2(11.609999, 6.7200007)
 texture = ExtResource("2_r8dbq")
 
-[node name="ButtonPlay" type="Button" parent="." unique_id=1043434899]
+[node name="Button" type="Button" parent="." unique_id=1043434899]
 layout_mode = 0
 offset_left = -96.0
 offset_top = 19.0
@@ -32,15 +30,6 @@ offset_right = 188.0
 offset_bottom = 87.0
 icon = ExtResource("3_5ncg0")
 flat = true
-
-[node name="ButtonExit" type="Button" parent="." unique_id=1178136878]
-layout_mode = 0
-offset_left = -96.0
-offset_top = 96.0
-offset_right = 64.0
-offset_bottom = 128.0
-text = "Exit
-"
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1780711944]
 position = Vector2(7, 44)
@@ -52,5 +41,4 @@ position = Vector2(-301, 18)
 scale = Vector2(0.8104997, 0.8970001)
 texture = ExtResource("4_n6o36")
 
-[connection signal="pressed" from="ButtonPlay" to="." method="NextScene"]
-[connection signal="pressed" from="ButtonExit" to="." method="ExitGame"]
+[connection signal="pressed" from="Button" to="." method="NextScene"]
