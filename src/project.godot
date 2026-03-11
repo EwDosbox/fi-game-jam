@@ -23,6 +23,11 @@ buses/default_bus_layout="uid://dvfwapqiqvh8b"
 
 Music="*uid://dal6odr3ickrx"
 
+[display]
+
+window/size/mode=3
+window/stretch/mode="canvas_items"
+
 [dotnet]
 
 project/assembly_name="Game Jam"
