@@ -20,7 +20,7 @@ public partial class PauseMenu : Control
 
 	public override void _Process(double delta)
 	{
-		if (Input.IsActionJustPressed("pause") && !player.IsDead)
+		if (Input.IsActionJustPressed("pause") && player.IsAlive)
 		{
 			ToggleSetting();
 			game.ToggleControl();

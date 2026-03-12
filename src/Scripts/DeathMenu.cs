@@ -13,7 +13,7 @@ public partial class DeathMenu : Control
 
 	public override void _Process(double delta)
 	{
-		if (player.IsDead)
+		if (!player.IsAlive)
 		{
 			this.Visible = true;
 		}

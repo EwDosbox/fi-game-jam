@@ -9,7 +9,7 @@ public partial class Enemy : Moveable
 			return;
 		isMoving = true;
 
-		sprite.Play("move");
+		sprite.PlayType(SpriteType.Move);
 		await base.SmoothMove();
 
 		Vector2 target = Position + direction * step;
@@ -21,7 +21,7 @@ public partial class Enemy : Moveable
 
 		await ToSignal(tween, Tween.SignalName.Finished);
 
-		sprite.Play("idle");
+		sprite.PlayType(SpriteType.Idle);
 		isMoving = false;
 	}
 

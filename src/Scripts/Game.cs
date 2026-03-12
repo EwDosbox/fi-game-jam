@@ -27,34 +27,34 @@ public partial class Game : Node2D
 
 	public override void _Process(double delta)
 	{
-		if (isTurnRunning || !canPlayerMove || PlayerScript.IsDead)
+		if (isTurnRunning || !canPlayerMove || !PlayerScript.IsAlive)
 			return;
 
-		Vector2 dir = Vector2.Zero;
+		Vector2I dir;
 
 		if (Input.IsActionJustPressed("move_left"))
-			dir = Vector2.Left;
+			dir = Vector2I.Left;
 		else if (Input.IsActionJustPressed("move_right"))
-			dir = Vector2.Right;
+			dir = Vector2I.Right;
 		else if (Input.IsActionJustPressed("move_up"))
-			dir = Vector2.Up;
+			dir = Vector2I.Up;
 		else if (Input.IsActionJustPressed("move_down"))
-			dir = Vector2.Down;
-
-		if (dir == Vector2.Zero)
+			dir = Vector2I.Down;
+		else
 			return;
 
 		GameTick(dir);
 
 	}
 
-	private async void GameTick(Vector2 playerDirection)
+	private async void GameTick(Vector2I playerDirection)
 	{
 		isTurnRunning = true;
 
 		await enemyManager.MoveAll();
 
-		await PlayerScript.SmoothMove(playerDirection);
+		PlayerScript.Direction = playerDirection;
+		await PlayerScript.SmoothMove();
 
 		turnCounter++;
 
