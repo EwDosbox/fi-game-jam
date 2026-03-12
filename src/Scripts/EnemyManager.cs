@@ -8,7 +8,7 @@ public partial class EnemyManager : Node2D
 	#endregion
 
 	#region Public Variables
-	public bool AllEnemiesDead => enemies.Where(e => IsInstanceValid(e)).All(e => e.isDead);
+	public bool AllEnemiesDead => enemies.Where(e => IsInstanceValid(e)).All(e => !e.IsAlive);
 	#endregion
 
 	#region References

@@ -6,25 +6,18 @@ public partial class EnemyW : Enemy
 {
 	#region Private Variables
 	private bool movingToLoop = true;
-	private bool isMoving = false;
 	private bool hitWall = false;
 	#endregion
 	#region Public Variables
 	#endregion
 	#region References
-	[Export]
-	private int NoOfSpaces = 1;
-	[Export]
-	private Marker2D startNode;
-	[Export]
-	private Marker2D loopNode;
-	[Export]
-	private Grid gridScript;
+	[Export] private Marker2D startNode;
+	[Export] private Marker2D loopNode;
 	#endregion
 
 	public override async Task SmoothMove()
 	{
-		if (isMoving || base.isDead)
+		if (isMoving || !isAlive)
 			return;
 		if (hitWall)
 		{
@@ -39,22 +32,22 @@ public partial class EnemyW : Enemy
 		Vector2 target = movingToLoop ? loop : start;
 		Vector2 direction = (target - GlobalPosition).Normalized();
 
-		Vector2 moveAmount = direction * NoOfSpaces * gridScript.GridSize;
+		Vector2 moveAmount = direction * step * Grid.GridSize;
 
-		KinematicCollision2D collision = MoveAndCollide(moveAmount);
-		if (collision != null)
-		{
-			GD.Print("EnemyW hit something: ", collision.GetCollider());
-			isMoving = false;
-			return;
-		}
+		// KinematicCollision2D collision = (this as CharacterBody2D).MoveAndCollide(moveAmount);
+		// if (collision != null)
+		// {
+		// 	GD.Print("EnemyW hit something: ", collision.GetCollider());
+		// 	isMoving = false;
+		// 	return;
+		// }
 
 		if (GlobalPosition.DistanceTo(target) < 1f)
 		{
 			hitWall = true;
 			movingToLoop = !movingToLoop;
 		}
-		GlobalPosition = GlobalPosition.Snapped(gridScript.GridVector);
+		GlobalPosition = GlobalPosition.Snapped(Grid.GridVector);
 
 		isMoving = false;
 

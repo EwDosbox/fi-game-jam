@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Threading.Tasks;
 
-public partial class EnemyS : Enemy
+public partial class EnemyS : Placeable
 {
 	#region Private Variables
 	#endregion
@@ -10,9 +10,4 @@ public partial class EnemyS : Enemy
 	#endregion
 	#region References
 	#endregion
-
-	public override async Task SmoothMove()
-	{
-		return;
-	}
 }

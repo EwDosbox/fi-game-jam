@@ -16,12 +16,8 @@ public partial class Player : CharacterBody2D
 	public int BedPower { get { return bedPower; } }
 	#endregion
 	#region References
-	[Export]
-	private AnimatedSprite2D sprite;
-	[Export]
-	private Grid gridScript;
-	[Export]
-	private SoundEffects sound;
+	[Export] private AnimatedSprite2D sprite;
+	[Export] private SoundEffects sound;
 	#endregion
 
 	public async Task SmoothMove(Vector2 direction)
@@ -37,8 +33,8 @@ public partial class Player : CharacterBody2D
 			bedPower = 1;
 
 		lastDirection = direction;
-		Vector2 targetPosition = GlobalPosition + (direction * (bedPower * gridScript.GridSize));
-		targetPosition = targetPosition.Snapped(gridScript.GridVector);
+		Vector2 targetPosition = GlobalPosition + (direction * (bedPower * Grid.GridSize));
+		targetPosition = targetPosition.Snapped(Grid.GridVector);
 
 		sprite.Play("move");
 		sound.PlayPlayerMove();
@@ -95,6 +91,6 @@ public partial class Player : CharacterBody2D
 
 		}
 
-		GlobalPosition = GlobalPosition.Snapped(gridScript.GridVector);
+		GlobalPosition = GlobalPosition.Snapped(Grid.GridVector);
 	}
 }
