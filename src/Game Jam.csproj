@@ -5,4 +5,7 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>GameJam</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Templates/**/*.cs" />
+  </ItemGroup>
 </Project>

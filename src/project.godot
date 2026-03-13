@@ -11,13 +11,15 @@ config_version=5
 [application]
 
 config/name="Eepy Deepy"
+config/version="1.2"
 run/main_scene="uid://cvph23p6b5tdm"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://dsuw2c1x0xyfg"
+config/windows_native_icon="res://Assets/Images/deepy_icon.ico"
 
 [audio]
 
-buses/default_bus_layout="uid://dvfwapqiqvh8b"
+buses/default_bus_layout=""
 
 [autoload]
 
@@ -31,6 +33,10 @@ window/stretch/mode="canvas_items"
 [dotnet]
 
 project/assembly_name="Game Jam"
+
+[editor]
+
+script/templates_search_path="res://Templates"
 
 [input]
 
