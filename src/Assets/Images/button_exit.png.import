@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dietcwoc1r3w2"
-path="res://.godot/imported/walking-evil-guy-sheet.png-a21b9128d749974e5beec5fb0fca049a.ctex"
+uid="uid://b4kmkqmldc4rk"
+path="res://.godot/imported/button_exit.png-2bca4ebd624c4dbf14681917b785501e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/walking-evil-guy-sheet.png"
-dest_files=["res://.godot/imported/walking-evil-guy-sheet.png-a21b9128d749974e5beec5fb0fca049a.ctex"]
+source_file="res://Assets/Images/button_exit.png"
+dest_files=["res://.godot/imported/button_exit.png-2bca4ebd624c4dbf14681917b785501e.ctex"]
 
 [params]
 

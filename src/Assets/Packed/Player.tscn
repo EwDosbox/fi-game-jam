@@ -1,7 +1,26 @@
 [gd_scene format=3 uid="uid://d1ctb6cckoeyo"]
 
 [ext_resource type="Script" uid="uid://v2rsb48f3g6k" path="res://Scripts/Player.cs" id="1_ify7s"]
-[ext_resource type="SpriteFrames" uid="uid://cjjju1688kcmi" path="res://Assets/Player.tres" id="2_ify7s"]
+[ext_resource type="Texture2D" uid="uid://6t7p7gcpwwqi" path="res://Assets/Images/deepy_idle.png" id="2_o8v37"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cbx4a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o8v37")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o8v37")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ify7s"]
 size = Vector2(128, 64)
@@ -16,7 +35,7 @@ sprite = NodePath("AnimatedSprite2D")
 position = Vector2(-5.722046e-06, 1.1920929e-07)
 rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
-sprite_frames = ExtResource("2_ify7s")
+sprite_frames = SubResource("SpriteFrames_cbx4a")
 animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1104575477]

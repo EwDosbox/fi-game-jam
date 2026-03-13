@@ -1,37 +1,31 @@
 [gd_scene format=4 uid="uid://bk6jm1brxhqvs"]
 
-[ext_resource type="PackedScene" uid="uid://d4hwciwdnl0xm" path="res://Assets/Packed/Level.tscn" id="1_xu5aw"]
-[ext_resource type="PackedScene" uid="uid://bxk3itqy6vcuw" path="res://Assets/Packed/enemy_w.tscn" id="2_ovrju"]
-[ext_resource type="PackedScene" uid="uid://dvm0q8m2ewvib" path="res://Assets/Packed/enemy_s.tscn" id="3_4h03u"]
+[ext_resource type="PackedScene" uid="uid://d4hwciwdnl0xm" path="res://Assets/Packed/level.tscn" id="1_vn4ka"]
+[ext_resource type="PackedScene" uid="uid://bxk3itqy6vcuw" path="res://Assets/Packed/enemy_w.tscn" id="2_fxldj"]
+[ext_resource type="PackedScene" uid="uid://dvm0q8m2ewvib" path="res://Assets/Packed/enemy_s.tscn" id="3_uteyb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t7f6x"]
 font_size = 41
 
-[node name="Level2" unique_id=964451484 instance=ExtResource("1_xu5aw")]
+[node name="Level2" unique_id=964451484 instance=ExtResource("1_vn4ka")]
 
-[node name="Grid" parent="." index="1" unique_id=734412611]
+[node name="Grid" parent="." index="2" unique_id=734412611]
 tile_map_data = PackedByteArray("AAD8////AAACAAIAAAD9////AAACAAIAAAD+////AAACAAIAAAD/////AAACAAIAAAAAAP//AAACAAIAAAABAP//AAACAAIAAAACAP//AAACAAIAAAADAP//AAACAAIAAAD7////AAACAAIAAAAEAP//AAACAAIAAAAEAAAAAAACAAIAAAAEAAEAAAACAAIAAAAEAAIAAAACAAIAAAD7/wMAAAACAAIAAAD8/wMAAAACAAIAAAD9/wMAAAACAAIAAAD+/wMAAAACAAIAAAD//wMAAAACAAIAAAAAAAMAAAACAAIAAAABAAMAAAACAAIAAAACAAMAAAACAAIAAAADAAMAAAACAAIAAAAEAAMAAAACAAIAAAADAAAAAAACAAIAAAADAAEAAAACAAIAAAADAAIAAAACAAIAAAA=")
 
-[node name="Player" parent="." index="2" unique_id=1088235652]
-position = Vector2(-256, -32)
-
-[node name="EnemyManager" parent="." index="4" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
+[node name="EnemyManager" parent="." index="3" unique_id=1002369456 node_paths=PackedStringArray("enemies")]
 enemies = [NodePath("Enemy"), NodePath("Enemy2"), NodePath("Enemy3")]
 
-[node name="Enemy" parent="EnemyManager" index="0" unique_id=292821970 node_paths=PackedStringArray("startMarker", "loopMarker", "GridScript") instance=ExtResource("2_ovrju")]
+[node name="Enemy" parent="EnemyManager" index="0" unique_id=292821970 instance=ExtResource("2_fxldj")]
 position = Vector2(288, 32)
-startMarker = NodePath("../../Markers/Start1")
-loopMarker = NodePath("../../Markers/Loop1")
-GridScript = NodePath("../../Grid")
 
-[node name="Enemy2" parent="EnemyManager" index="1" unique_id=1811426035 node_paths=PackedStringArray("startMarker", "loopMarker", "GridScript") instance=ExtResource("2_ovrju")]
+[node name="Enemy2" parent="EnemyManager" index="1" unique_id=1811426035 instance=ExtResource("2_fxldj")]
 position = Vector2(32.000008, 224)
-startMarker = NodePath("../../Markers/Start2")
-loopMarker = NodePath("../../Markers/Loop1")
-GridScript = NodePath("../../Grid")
 
-[node name="Enemy3" parent="EnemyManager" index="2" unique_id=480000215 instance=ExtResource("3_4h03u")]
+[node name="Enemy3" parent="EnemyManager" index="2" unique_id=480000215 instance=ExtResource("3_uteyb")]
 position = Vector2(224, -32)
+
+[node name="Player" parent="." index="4" unique_id=1088235652]
+position = Vector2(-256, -32)
 
 [node name="Boundary" parent="." index="5" unique_id=1288459111]
 tile_map_data = PackedByteArray("AAD7//7/AAABAAAAAAD8//7/AAABAAAAAAD9//7/AAABAAAAAAD+//7/AAABAAAAAAD///7/AAABAAAAAAAAAP7/AAABAAAAAAABAP7/AAABAAAAAAACAP7/AAABAAAAAAADAP7/AAABAAAAAAAEAP7/AAABAAAAAAD7/wIAAAABAAAAAAD8/wIAAAABAAAAAAD9/wIAAAABAAAAAAD+/wIAAAABAAAAAAD//wIAAAABAAAAAAAAAAIAAAABAAAAAAABAAIAAAABAAAAAAACAAIAAAAEAAEAAAD6////AAAAAAEAAAD6/wMAAAAAAAEAAAAFAP//AAADAAEAAAAFAAAAAAADAAEAAAAFAAEAAAADAAEAAAAFAAIAAAADAAEAAAAFAAMAAAADAAEAAAAFAAQAAAADAAMAAAD6//7/AAAAAAAAAAD6/wIAAAAAAAAAAAD6/wQAAAAAAAMAAAAFAP7/AAADAAAAAAD7/wQAAAABAAMAAAD8/wQAAAABAAMAAAD9/wQAAAABAAMAAAD+/wQAAAABAAMAAAD//wQAAAABAAMAAAAAAAQAAAABAAMAAAABAAQAAAABAAMAAAACAAQAAAABAAMAAAADAAQAAAABAAMAAAAEAAQAAAABAAMAAAD7/wAAAAACAAMAAAD8/wAAAAACAAMAAAD9/wAAAAACAAMAAAD+/wAAAAACAAMAAAD//wAAAAACAAMAAAAAAAAAAAACAAMAAAABAAAAAAACAAMAAAACAAAAAAAFAAMAAAD6/wAAAAAAAAMAAAACAAEAAAAAAAIAAAA=")
@@ -40,12 +34,14 @@ tile_map_data = PackedByteArray("AAD7//7/AAABAAAAAAD8//7/AAABAAAAAAD9//7/AAABAAA
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
 offset_right = 576.0
 offset_bottom = 320.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="ColorRect" parent="PauseMenu" index="0" unique_id=2000308245]
+[node name="ColorRect" parent="PauseMenu" index="0" unique_id=1539306798]
 anchors_preset = 15
 anchor_left = 0.0
 anchor_top = 0.0
@@ -67,7 +63,7 @@ text = "Eepy Deepy"
 label_settings = SubResource("LabelSettings_t7f6x")
 horizontal_alignment = 1
 
-[node name="ButtonContinue" parent="PauseMenu" index="2" unique_id=2113186149]
+[node name="ButtonContinue" parent="PauseMenu" index="3" unique_id=2113186149]
 anchors_preset = -1
 anchor_left = 0.0
 anchor_top = 0.0
@@ -85,7 +81,7 @@ text = "Continue
 icon = null
 flat = false
 
-[node name="ButtonMainMenu" parent="PauseMenu" index="3" unique_id=1369809712]
+[node name="ButtonMainMenu" parent="PauseMenu" index="4" unique_id=1369809712]
 offset_left = 320.0
 offset_top = 416.0
 offset_right = -320.0

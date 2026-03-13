@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6wbllxe3ix2u"
-path="res://.godot/imported/end-button.png-cdb624e3cf6ec011a3ebc7de97d85276.ctex"
+uid="uid://dietcwoc1r3w2"
+path="res://.godot/imported/enemy_w.png-2ecc038443dc1c33cabb983bb5307521.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/end-button.png"
-dest_files=["res://.godot/imported/end-button.png-cdb624e3cf6ec011a3ebc7de97d85276.ctex"]
+source_file="res://Assets/Images/enemy_w.png"
+dest_files=["res://.godot/imported/enemy_w.png-2ecc038443dc1c33cabb983bb5307521.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsuw2c1x0xyfg"
-path="res://.godot/imported/eepy-deepy-mainmenu.png-652415bef8ecab1fc226a6b7c61ef20f.ctex"
+uid="uid://dyq6gmhwc0rma"
+path="res://.godot/imported/button_main_menu.png-4a38aa524b81d92c17f69ea7aded152b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/eepy-deepy-mainmenu.png"
-dest_files=["res://.godot/imported/eepy-deepy-mainmenu.png-652415bef8ecab1fc226a6b7c61ef20f.ctex"]
+source_file="res://Assets/Images/button_main_menu.png"
+dest_files=["res://.godot/imported/button_main_menu.png-4a38aa524b81d92c17f69ea7aded152b.ctex"]
 
 [params]
 

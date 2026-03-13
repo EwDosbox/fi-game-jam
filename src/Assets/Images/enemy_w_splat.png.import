@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyq6gmhwc0rma"
-path="res://.godot/imported/main-menu-button.png-838219fbce111e1c726d918c082ff8c3.ctex"
+uid="uid://lqmu1n2xuisw"
+path="res://.godot/imported/enemy_w_splat.png-740f4cd425ec115149199467c6fb6202.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/main-menu-button.png"
-dest_files=["res://.godot/imported/main-menu-button.png-838219fbce111e1c726d918c082ff8c3.ctex"]
+source_file="res://Assets/Images/enemy_w_splat.png"
+dest_files=["res://.godot/imported/enemy_w_splat.png-740f4cd425ec115149199467c6fb6202.ctex"]
 
 [params]
 

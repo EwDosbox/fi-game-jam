@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lqmu1n2xuisw"
-path="res://.godot/imported/walking-evil-guy-splat.png-498688d1e3577f6ea954fdd2255e5e60.ctex"
+uid="uid://dh3qx4pl464qv"
+path="res://.godot/imported/button_retry.png-e7306789fdf20d6c482d809fabd3d25f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/walking-evil-guy-splat.png"
-dest_files=["res://.godot/imported/walking-evil-guy-splat.png-498688d1e3577f6ea954fdd2255e5e60.ctex"]
+source_file="res://Assets/Images/button_retry.png"
+dest_files=["res://.godot/imported/button_retry.png-e7306789fdf20d6c482d809fabd3d25f.ctex"]
 
 [params]
 

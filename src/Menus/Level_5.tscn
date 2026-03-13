@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://b00as7rxg5naq"]
 
-[ext_resource type="PackedScene" uid="uid://d4hwciwdnl0xm" path="res://Assets/Packed/Level.tscn" id="1_uyskk"]
+[ext_resource type="PackedScene" uid="uid://d4hwciwdnl0xm" path="res://Assets/Packed/level.tscn" id="1_uyskk"]
 [ext_resource type="PackedScene" uid="uid://dvm0q8m2ewvib" path="res://Assets/Packed/enemy_s.tscn" id="2_7cca5"]
-[ext_resource type="PackedScene" uid="uid://xs0tfk0povkj" path="res://Menus/Level_6.tscn" id="2_fmhml"]
+[ext_resource type="PackedScene" uid="uid://xs0tfk0povkj" path="res://Menus/level_6.tscn" id="2_fmhml"]
 
 [node name="Level" unique_id=964451484 instance=ExtResource("1_uyskk")]
 

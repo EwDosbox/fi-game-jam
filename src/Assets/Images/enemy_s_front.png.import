@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://t70xgumnkors"
-path="res://.godot/imported/stationary-evil-guy-splat.png-f404fbf16f35dad83d4bc9ba75b0e46a.ctex"
+uid="uid://dh1x2mxqciv6h"
+path="res://.godot/imported/enemy_s_front.png-86545629b80291b7166cc595fa3fe9a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/stationary-evil-guy-splat.png"
-dest_files=["res://.godot/imported/stationary-evil-guy-splat.png-f404fbf16f35dad83d4bc9ba75b0e46a.ctex"]
+source_file="res://Assets/Images/enemy_s_front.png"
+dest_files=["res://.godot/imported/enemy_s_front.png-86545629b80291b7166cc595fa3fe9a3.ctex"]
 
 [params]
 

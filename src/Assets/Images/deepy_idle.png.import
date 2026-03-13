@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcq3t1h4vnvak"
-path="res://.godot/imported/slime-wall.png-571937fff10abb2e610a37a756cd11a3.ctex"
+uid="uid://6t7p7gcpwwqi"
+path="res://.godot/imported/deepy_idle.png-0eb9ab867e750b1375781ef2cafb212a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/slime-wall.png"
-dest_files=["res://.godot/imported/slime-wall.png-571937fff10abb2e610a37a756cd11a3.ctex"]
+source_file="res://Assets/Images/deepy_idle.png"
+dest_files=["res://.godot/imported/deepy_idle.png-0eb9ab867e750b1375781ef2cafb212a.ctex"]
 
 [params]
 

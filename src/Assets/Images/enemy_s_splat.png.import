@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6t7p7gcpwwqi"
-path="res://.godot/imported/eepy-deepy.png-1b4678d151440d9ea042bfc0a09a358b.ctex"
+uid="uid://t70xgumnkors"
+path="res://.godot/imported/enemy_s_splat.png-dbe1aa91f025f899e7e37fbf77087e5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/eepy-deepy.png"
-dest_files=["res://.godot/imported/eepy-deepy.png-1b4678d151440d9ea042bfc0a09a358b.ctex"]
+source_file="res://Assets/Images/enemy_s_splat.png"
+dest_files=["res://.godot/imported/enemy_s_splat.png-dbe1aa91f025f899e7e37fbf77087e5e.ctex"]
 
 [params]
 

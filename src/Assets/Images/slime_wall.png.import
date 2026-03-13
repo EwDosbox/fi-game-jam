@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh3qx4pl464qv"
-path="res://.godot/imported/retry button.png-b66c71407d24bf542acb02ae034b9e63.ctex"
+uid="uid://dcq3t1h4vnvak"
+path="res://.godot/imported/slime_wall.png-98b832e479563d40fa19890f52c2de58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/retry button.png"
-dest_files=["res://.godot/imported/retry button.png-b66c71407d24bf542acb02ae034b9e63.ctex"]
+source_file="res://Assets/Images/slime_wall.png"
+dest_files=["res://.godot/imported/slime_wall.png-98b832e479563d40fa19890f52c2de58.ctex"]
 
 [params]
 

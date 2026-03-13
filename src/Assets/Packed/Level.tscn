@@ -1,24 +1,136 @@
 [gd_scene format=3 uid="uid://d4hwciwdnl0xm"]
 
 [ext_resource type="Script" uid="uid://dlxvbs46si0oc" path="res://Scripts/Game.cs" id="1_b7ecg"]
-[ext_resource type="TileSet" uid="uid://b8u1i3mo41fqi" path="res://Assets/tile_set.tres" id="2_3pl1g"]
 [ext_resource type="Script" uid="uid://bmq8i1fs2o5nx" path="res://Scripts/Grid.cs" id="2_jr45x"]
 [ext_resource type="PackedScene" uid="uid://dvm0q8m2ewvib" path="res://Assets/Packed/enemy_s.tscn" id="2_s6o11"]
-[ext_resource type="PackedScene" uid="uid://d1ctb6cckoeyo" path="res://Assets/Packed/Player.tscn" id="4_igmha"]
+[ext_resource type="PackedScene" uid="uid://d1ctb6cckoeyo" path="res://Assets/Packed/player.tscn" id="4_igmha"]
 [ext_resource type="Script" uid="uid://cxx03iwba30vp" path="res://Scripts/EnemyManager.cs" id="5_mctwc"]
-[ext_resource type="Texture2D" uid="uid://o41q14npfmd2" path="res://Assets/Images/CosmicLilac_Tiles.png" id="6_t7f6x"]
+[ext_resource type="Texture2D" uid="uid://o41q14npfmd2" path="res://Assets/Images/tileset.png" id="6_t7f6x"]
 [ext_resource type="Script" uid="uid://p7aa5pwvvyf1" path="res://Scripts/PauseMenu.cs" id="8_8keqt"]
-[ext_resource type="Texture2D" uid="uid://dggy8ty5536qi" path="res://Assets/Images/continue-button.png" id="9_8keqt"]
-[ext_resource type="Texture2D" uid="uid://dyq6gmhwc0rma" path="res://Assets/Images/main-menu-button.png" id="9_glpoc"]
+[ext_resource type="Texture2D" uid="uid://dggy8ty5536qi" path="res://Assets/Images/button_continue.png" id="9_8keqt"]
+[ext_resource type="Texture2D" uid="uid://dyq6gmhwc0rma" path="res://Assets/Images/button_main_menu.png" id="9_glpoc"]
 [ext_resource type="Texture2D" uid="uid://ckkpoe47wtigt" path="res://Assets/Images/tittle-card.png" id="9_i2vdq"]
-[ext_resource type="Texture2D" uid="uid://bm5dyc600l4u" path="res://Assets/Images/purple background.png" id="12_7bnyv"]
+[ext_resource type="Texture2D" uid="uid://bm5dyc600l4u" path="res://Assets/Images/back_purple.png" id="12_7bnyv"]
 [ext_resource type="Script" uid="uid://dp1r3ftrkr3tw" path="res://Scripts/SoundEffects.cs" id="13_8rqxw"]
 [ext_resource type="Script" uid="uid://dv13xmndpxl6m" path="res://Scripts/DeathMenu.cs" id="13_jm442"]
 [ext_resource type="Script" uid="uid://cdicamxth3mxk" path="res://Scripts/BedPowerCounter.cs" id="13_s6o11"]
-[ext_resource type="AudioStream" uid="uid://crw55hho2suo8" path="res://Assets/Audio/player-move.mp3" id="14_qedcw"]
-[ext_resource type="AudioStream" uid="uid://bwrs2gedxa8pi" path="res://Assets/Audio/player-death.mp3" id="15_n6n4o"]
-[ext_resource type="AudioStream" uid="uid://bpca6m5s0vxys" path="res://Assets/Audio/enemy-explosion.mp3" id="16_s6o11"]
-[ext_resource type="Texture2D" uid="uid://dh3qx4pl464qv" path="res://Assets/Images/retry button.png" id="18_n6n4o"]
+[ext_resource type="AudioStream" uid="uid://crw55hho2suo8" path="res://Assets/Audio/player_move.mp3" id="14_qedcw"]
+[ext_resource type="AudioStream" uid="uid://bwrs2gedxa8pi" path="res://Assets/Audio/player_death.mp3" id="15_n6n4o"]
+[ext_resource type="AudioStream" uid="uid://bpca6m5s0vxys" path="res://Assets/Audio/enemy_explosion.mp3" id="16_s6o11"]
+[ext_resource type="Texture2D" uid="uid://dh3qx4pl464qv" path="res://Assets/Images/button_retry.png" id="18_n6n4o"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tv5l"]
+texture = ExtResource("6_t7f6x")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_e0cyi"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_3tv5l")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_62dxq"]
 texture = ExtResource("6_t7f6x")
@@ -262,7 +374,7 @@ scale = Vector2(29.41, 18.58)
 texture = ExtResource("12_7bnyv")
 
 [node name="Grid" type="TileMapLayer" parent="." unique_id=734412611]
-tile_set = ExtResource("2_3pl1g")
+tile_set = SubResource("TileSet_e0cyi")
 script = ExtResource("2_jr45x")
 GridSize = 64
 
@@ -270,11 +382,9 @@ GridSize = 64
 script = ExtResource("5_mctwc")
 enemies = []
 
-[node name="Player" parent="." unique_id=1088235652 node_paths=PackedStringArray("gridScript", "sound") instance=ExtResource("4_igmha")]
+[node name="Player" parent="." unique_id=1088235652 instance=ExtResource("4_igmha")]
 position = Vector2(0, -25)
 collision_layer = 80
-gridScript = NodePath("../Grid")
-sound = NodePath("../SoundEffects")
 
 [node name="Boundary" type="TileMapLayer" parent="." unique_id=1288459111]
 tile_set = SubResource("TileSet_c3tdy")

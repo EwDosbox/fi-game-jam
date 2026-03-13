@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4fhbfwdh08f"
-path="res://.godot/imported/slime-corner.png-f4826995ecc4cb5516804b530fb071fa.ctex"
+uid="uid://6wbllxe3ix2u"
+path="res://.godot/imported/button_end.png-abe4e9337f307ac41c5edc356eb19d58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/slime-corner.png"
-dest_files=["res://.godot/imported/slime-corner.png-f4826995ecc4cb5516804b530fb071fa.ctex"]
+source_file="res://Assets/Images/button_end.png"
+dest_files=["res://.godot/imported/button_end.png-abe4e9337f307ac41c5edc356eb19d58.ctex"]
 
 [params]
 

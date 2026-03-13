@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o41q14npfmd2"
-path="res://.godot/imported/CosmicLilac_Tiles.png-52abbd113ec082b6126a35ed6675da26.ctex"
+uid="uid://dsuw2c1x0xyfg"
+path="res://.godot/imported/deepy_icon.png-4d3df68ad2c0ee8daf852eb6913d7db5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/CosmicLilac_Tiles.png"
-dest_files=["res://.godot/imported/CosmicLilac_Tiles.png-52abbd113ec082b6126a35ed6675da26.ctex"]
+source_file="res://Assets/Images/deepy_icon.png"
+dest_files=["res://.godot/imported/deepy_icon.png-4d3df68ad2c0ee8daf852eb6913d7db5.ctex"]
 
 [params]
 

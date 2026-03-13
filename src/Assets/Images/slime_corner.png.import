@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm5dyc600l4u"
-path="res://.godot/imported/purple background.png-716a3431d8318eb05d9752216ea5f882.ctex"
+uid="uid://c4fhbfwdh08f"
+path="res://.godot/imported/slime_corner.png-3919501d298d22d286207c34ffed7c18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/purple background.png"
-dest_files=["res://.godot/imported/purple background.png-716a3431d8318eb05d9752216ea5f882.ctex"]
+source_file="res://Assets/Images/slime_corner.png"
+dest_files=["res://.godot/imported/slime_corner.png-3919501d298d22d286207c34ffed7c18.ctex"]
 
 [params]
 
