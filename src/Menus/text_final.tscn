@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dmdgs7k78kf5p"]
 
-[ext_resource type="Script" uid="uid://nruua05d0mhu" path="res://Scripts/MainMenu.cs" id="1_ly0ai"]
+[ext_resource type="Script" uid="uid://nruua05d0mhu" path="res://Scripts/Menus/MainMenu.cs" id="1_ly0ai"]
 [ext_resource type="PackedScene" uid="uid://bxk3itqy6vcuw" path="res://Assets/Packed/enemy_w.tscn" id="2_aytxx"]
 [ext_resource type="Texture2D" uid="uid://bm5dyc600l4u" path="res://Assets/Images/back_purple.png" id="2_lsl73"]
 [ext_resource type="Texture2D" uid="uid://6wbllxe3ix2u" path="res://Assets/Images/button_end.png" id="4_aytxx"]

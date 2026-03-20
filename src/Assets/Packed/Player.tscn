@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d1ctb6cckoeyo"]
 
-[ext_resource type="Script" uid="uid://v2rsb48f3g6k" path="res://Scripts/Player.cs" id="1_ify7s"]
+[ext_resource type="Script" uid="uid://v2rsb48f3g6k" path="res://Scripts/Placeables/Player.cs" id="1_ify7s"]
 [ext_resource type="Texture2D" uid="uid://6t7p7gcpwwqi" path="res://Assets/Images/deepy_idle.png" id="2_o8v37"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cbx4a"]
@@ -10,7 +10,7 @@ animations = [{
 "texture": ExtResource("2_o8v37")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"move_0",
 "speed": 5.0
 }, {
 "frames": [{
@@ -18,7 +18,39 @@ animations = [{
 "texture": ExtResource("2_o8v37")
 }],
 "loop": true,
-"name": &"move",
+"name": &"move_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o8v37")
+}],
+"loop": true,
+"name": &"move_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o8v37")
+}],
+"loop": true,
+"name": &"move_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o8v37")
+}],
+"loop": true,
+"name": &"move_4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o8v37")
+}],
+"loop": true,
+"name": &"move_5",
 "speed": 5.0
 }]
 
@@ -36,7 +68,7 @@ position = Vector2(-5.722046e-06, 1.1920929e-07)
 rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_cbx4a")
-animation = &"move"
+animation = &"move_5"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1104575477]
 position = Vector2(1.9073486e-06, 0)

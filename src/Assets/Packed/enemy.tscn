@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d2dg1bvueo8oq"]
 
-[ext_resource type="Script" uid="uid://mevoyu51ds8y" path="res://Scripts/Enemy.cs" id="1_2wu0s"]
+[ext_resource type="Script" uid="uid://mevoyu51ds8y" path="res://Scripts/Placeables/Enemy.cs" id="1_2wu0s"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2wu0s"]
 animations = [{

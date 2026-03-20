@@ -15,6 +15,15 @@ public partial class Player : Moveable
 	[Export] private AudioStreamPlayer2D moveSound;
 	#endregion
 
+	public override void _Process(double delta)
+	{
+		if (!isAlive || isMoving)
+			return;
+
+
+	}
+
+
 	public async override Task SmoothMove()
 	{
 		if (isMoving)

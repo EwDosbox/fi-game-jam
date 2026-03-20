@@ -27,7 +27,6 @@ Music="*uid://dal6odr3ickrx"
 
 [display]
 
-window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [dotnet]
